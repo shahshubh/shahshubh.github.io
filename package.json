@@ -1,7 +1,6 @@
 {
   "name": "portfolio_shubh",
   "version": "0.1.0",
-  "private": true,
   "homepage": "https://shahshubh.github.io/",
   "dependencies": {
     "bootstrap": "^4.3.1",
