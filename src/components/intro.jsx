@@ -25,6 +25,13 @@ class Intro extends React.Component{
                     >
                       View My Resume
                     </a>
+                    {/* <a 
+                      className="btn btn-primary btn js-scroll px-4 ml-5" 
+                      style={{ cursor: "pointer" }}
+                      href="#work"
+                    >
+                      View My Work
+                    </a> */}
                   </p>
                 </div>
               </div>

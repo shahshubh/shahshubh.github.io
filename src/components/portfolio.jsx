@@ -1,40 +1,32 @@
 import React from 'react';
 
-//import vmarine
-import vmarine from "../img/Vmarine.jpg";
-import vmarine1 from "../img/vmarine-1.png";
-import vmarine2 from "../img/vmarine-2.png";
-import vmarine3 from "../img/vmarine-3.png";
-import vmarine4 from "../img/vmarine-4.png";
-import vmarine5 from "../img/vmarine-5.png";
-import vmarine6 from "../img/vmarine-6.png";
-import vmarine7 from "../img/vmarine-7.png";
+//import socialApp
+import socialApp from '../img/socialapp/home.PNG';
+import socialApp1 from '../img/socialapp/comments.PNG';
+import socialApp2 from '../img/socialapp/profile.png';
+import socialApp3 from '../img/socialapp/confirm.PNG';
+import socialApp4 from '../img/socialapp/chat.PNG';
+import socialApp5 from '../img/socialapp/resetpassword.PNG';
 
-//aguadeluz pics
-import aguaDeLuz from "../img/aguaDeLuz.png";
-import aguaDeLuz1 from "../img/aguaDeLuz-1.png";
-import aguaDeLuz2 from "../img/aguaDeLuz-2.png";
-import aguaDeLuz3 from "../img/aguaDeLuz-3.png";
-import aguaDeLuz4 from "../img/aguaDeLuz-4.png";
+//import medeasy
+import medeasy from '../img/medeasy/dashboard.png'
+import medeasy1 from '../img/medeasy/admin-orders.png'
+import medeasy2 from '../img/medeasy/pending-orders.png'
+import medeasy3 from '../img/medeasy/home.png'
+import medeasy4 from '../img/medeasy/cart.PNG'
+import medeasy5 from '../img/medeasy/orders.PNG'
+import medeasy6 from '../img/medeasy/order-details.PNG'
 
-//import todo
-import todoList from "../img/todolist.png";
-import todoList1 from "../img/todo-1.png";
-import todoList2 from "../img/todo-2.png";
-import todoList3 from "../img/todo-3.png";
+// import chatapp
+import chatapp from '../img/chat-app/1.PNG'
+import chatapp1 from '../img/chat-app/2.PNG'
 
-//import amtbw
-import amtbw from "../img/amtbw.png";
+//import predimage
+import predimage from '../img/predimage/Capture.PNG'
+import predimage1 from '../img/predimage/screen1.PNG'
+import predimage2 from '../img/predimage/screen2.PNG'
+import predimage3 from '../img/predimage/screen4.PNG'
 
-//import medlingos
-import medlingos from "../img/medlingos.jpg";
-import medlingos1 from "../img/medlingos-1.jpg";
-import medlingos2 from "../img/medlingos-2.jpg";
-import medlingos3 from "../img/medlingos-3.jpg";
-import medlingos4 from "../img/medlingos-4.jpg";
-
-//import landing page
-import product from "../img/product.png";
 
 class Portfolio extends React.Component{
 
@@ -58,24 +50,30 @@ class Portfolio extends React.Component{
               <div className="row">
                 <div className="col-md-4">
                   <div className="work-box">
-                    <a href={vmarine} data-lightbox="gallery-vmarine">
+                    <a href={socialApp} data-lightbox="gallery-vmarine">
                       <div className="work-img">
-                        <img src={vmarine} alt="" className="img-fluid"/>
+                        <img src={socialApp} alt="" className="img-fluid"/>
                       </div>
                     </a>
                       <div className="work-content">
                         <div className="row">
                           <div className="col-sm-8">
-                            <a href="">
-                            <h2 className="w-title">Vmarine <i className="ion-link"></i> </h2>
-                            </a>
+                            <h2 className="w-title">
+                              <a href="https://sociallappp.herokuapp.com/">
+                                SocialApp 
+                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-link"></i> 
+                              </a>
+                              <a href="https://github.com/shahshubh/socialApp-MERN">
+                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-social-github"></i> 
+                              </a>
+                            </h2>
                             <div className="w-more">
-                              <span className="w-ctegory">HTML5  CSS3  Bootstrap  Webpack  Wordpress  MySQL  ReactJS</span> {/*/ <span className="w-date">18 Sep. 2018</span>*/}
+                              <span className="w-ctegory">REACTJS  NODEJS  EXPRESSJS  MONGODB  BOOTSTRAP-MATERIAL</span> {/*/ <span className="w-date">18 Sep. 2018</span>*/}
                             </div>
 
                           </div>
                           <div className="col-sm-4">
-                          <a href={vmarine} data-lightbox="gallery-vmarine">
+                          <a href={socialApp1} data-lightbox="gallery-vmarine">
                               <div className="w-like">
                                 <span className="ion-ios-plus-outline"></span>
                               </div>
@@ -85,146 +83,132 @@ class Portfolio extends React.Component{
                         </div>
                       </div>
                       
-                      <a href={vmarine1} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={vmarine2} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={vmarine3} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={vmarine4} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={vmarine5} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={vmarine6} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={vmarine7} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={socialApp2} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={socialApp3} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={socialApp4} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={socialApp5} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
                   </div>
                 </div>
+
+
                 <div className="col-md-4">
                   <div className="work-box">
-                    <a href={aguaDeLuz} data-lightbox="gallery-aguadeluz">
-                      <div className="work-img">
-                        <img src={aguaDeLuz} alt="" className="img-fluid"/>
+                    <a href={medeasy} data-lightbox="gallery-vmarine">
+                      <div style={{ height:"165px", width: "350px" }} className="work-img">
+                        <img src={medeasy} alt="" className="img-fluid"/>
                       </div>
+                    </a>
                       <div className="work-content">
                         <div className="row">
                           <div className="col-sm-8">
-                            <h2 className="w-title">Agua De Luz</h2>
+                            <h2 className="w-title">
+                              <a href="https://medeasyy.herokuapp.com/">
+                                MedEasy 
+                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-link"></i> 
+                              </a>
+                              <a href="https://github.com/shahshubh/medEasy">
+                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-social-github"></i> 
+                              </a>
+
+                            </h2>
                             <div className="w-more">
-                              <span className="w-ctegory">HTML5  CSS3  Bootstrap  Webpack SmoothScrolling  VanillaJS</span> {/*/ <span className="w-date">18 Sep. 2018</span>*/}
+                              <span className="w-ctegory">HTML  CSS  BOOTSTRAP  JAVASCRIPT   NODEJS  EXPRESSJS  MONGODB  </span> {/*/ <span className="w-date">18 Sep. 2018</span>*/}
                             </div>
                           </div>
                           <div className="col-sm-4">
-                            <div className="w-like">
-                              <span className="ion-ios-plus-outline"></span>
-                            </div>
+                          <a href={medeasy1} data-lightbox="gallery-vmarine">
+                              <div className="w-like">
+                                <span className="ion-ios-plus-outline"></span>
+                              </div>
+                          </a>
                           </div>
                         </div>
                       </div>
-                    </a>
-                    <a href={aguaDeLuz1} data-lightbox="gallery-aguadeluz" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                    <a href={aguaDeLuz2} data-lightbox="gallery-aguadeluz" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                    <a href={aguaDeLuz3} data-lightbox="gallery-aguadeluz" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                    <a href={aguaDeLuz4} data-lightbox="gallery-aguadeluz" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      
+                      <a href={medeasy2} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={medeasy3} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={medeasy4} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={medeasy5} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={medeasy6} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
                   </div>
                 </div>
+
                 <div className="col-md-4">
                   <div className="work-box">
-                    <a href={todoList} data-lightbox="gallery-todo">
-                      <div className="work-img">
-                        <img src={todoList} alt="" className="img-fluid"/>
+                    <a href={chatapp1} data-lightbox="gallery-vmarine">
+                      <div style={{ height:"165px", width: "350px" }} className="work-img">
+                        <img src={chatapp1} alt="" className="img-fluid"/>
                       </div>
+                    </a>
                       <div className="work-content">
                         <div className="row">
                           <div className="col-sm-8">
-                            <h2 className="w-title">Todo List</h2>
+                            <h2 className="w-title">
+                              <a href="https://chat-appln.netlify.com/">
+                                Chat-App 
+                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-link"></i> 
+                              </a>
+                              <a href="https://github.com/shahshubh/chat-app">
+                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-social-github"></i> 
+                              </a>
+                            </h2>
                             <div className="w-more">
-                              <span className="w-ctegory">HTML5  CSS3  Bootstrap  Webpack  ReactJS</span>{/*} / <span className="w-date">18 Sep. 2018</span>*/}
+                              <span className="w-ctegory">REACTJS   NODEJS  EXPRESSJS  SOCKET.IO </span> {/*/ <span className="w-date">18 Sep. 2018</span>*/}
                             </div>
                           </div>
                           <div className="col-sm-4">
-                            <div className="w-like">
-                              <span className="ion-ios-plus-outline"></span>
-                            </div>
+                          <a href={chatapp} data-lightbox="gallery-vmarine">
+                              <div className="w-like">
+                                <span className="ion-ios-plus-outline"></span>
+                              </div>
+                          </a>
                           </div>
                         </div>
                       </div>
-                    </a>
-                    <a href={todoList1} data-lightbox="gallery-todo" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                    <a href={todoList2} data-lightbox="gallery-todo" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                    <a href={todoList3} data-lightbox="gallery-todo" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      
                   </div>
                 </div>
+
+
+
                 <div className="col-md-4">
                   <div className="work-box">
-                    <a href={medlingos} data-lightbox="gallery-medlingos">
-                      <div className="work-img">
-                        <img src={medlingos} alt="" className="img-fluid"/>
+                    <a href={predimage} data-lightbox="gallery-vmarine">
+                      <div style={{ height:"165px", width: "350px" }} className="work-img">
+                        <img src={predimage} alt="" className="img-fluid"/>
                       </div>
+                    </a>
                       <div className="work-content">
                         <div className="row">
                           <div className="col-sm-8">
-                            <h2 className="w-title">Medlingos</h2>
+                            <h2 className="w-title">
+                              <a href="https://github.com/shahshubh/model-trainer">
+                                predImage - model trainer 
+                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-link"></i> 
+                              </a>
+                              <a href="https://github.com/shahshubh/model-trainer">
+                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-social-github"></i> 
+                              </a>
+                            </h2>
                             <div className="w-more">
-                              <span className="w-ctegory">Bootstrap ReactJS GoogleAPI</span>{/*/ <span className="w-date">18 Sep. 2018</span>*/}
+                              <span className="w-ctegory">BOOTSTRAP  NODEJS  JAVASCRIPT  FLASK  TENSORFLOW  OPENCV  KERAS-CNN  </span> {/*/ <span className="w-date">18 Sep. 2018</span>*/}
                             </div>
                           </div>
                           <div className="col-sm-4">
-                            <div className="w-like">
-                              <span className="ion-ios-plus-outline"></span>
-                            </div>
+                          <a href={predimage1} data-lightbox="gallery-vmarine">
+                              <div className="w-like">
+                                <span className="ion-ios-plus-outline"></span>
+                              </div>
+                          </a>
                           </div>
                         </div>
                       </div>
-                    </a>
-                    <a href={medlingos1} data-lightbox="gallery-medlingos" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                    <a href={medlingos2} data-lightbox="gallery-medlingos" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                    <a href={medlingos3} data-lightbox="gallery-medlingos" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                    <a href={medlingos4} data-lightbox="gallery-medlingos" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      
+                      <a href={predimage2} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={predimage3} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
                   </div>
                 </div>
-                <div className="col-md-4">
-                  <div className="work-box">
-                    <a href={amtbw} data-lightbox="gallery-amtbw">
-                      <div className="work-img">
-                        <img src={amtbw} alt="" className="img-fluid"/>
-                      </div>
-                      <div className="work-content">
-                        <div className="row">
-                          <div className="col-sm-8">
-                            <h2 className="w-title">A Mile To Be Wild</h2>
-                            <div className="w-more">
-                              <span className="w-ctegory">Wordpress  Blogging-Website</span>{/*/ <span className="w-date">18 Sep. 2018</span>*/}
-                            </div>
-                          </div>
-                          <div className="col-sm-4">
-                            <div className="w-like">
-                              <span className="ion-ios-plus-outline"></span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="work-box">
-                    <a href={product} data-lightbox="gallery-mf">
-                      <div className="work-img">
-                        <img src={product} alt="" className="img-fluid"/>
-                      </div>
-                      <div className="work-content">
-                        <div className="row">
-                          <div className="col-sm-8">
-                            <h2 className="w-title">Product Landing Page</h2>
-                            <div className="w-more">
-                              <span className="w-ctegory">HTML5  CSS3  Bootstrap</span>{/*/ <span className="w-date">18 Sep. 2017</span>*/}
-                            </div>
-                          </div>
-                          <div className="col-sm-4">
-                            <div className="w-like">
-                              <span className="ion-ios-plus-outline"></span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
+
                 
               </div>
             </div>
