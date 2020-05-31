@@ -7,15 +7,15 @@ class About extends React.Component{
         this.state = {
             skills:[
                 {id:"HTML_CSS_skill", content: "HTML / CSS",porcentage: "85%", value: "85"},
+                {id:"JavaScript_skill", content: "JavaScript",porcentage: "80%", value: "80"},
                 // {id:"CSS_skill", content: "CSS",porcentage: "80%", value: "80"},
                 {id:"Java_skill", content: "Java",porcentage: "75%", value: "75"},
-                {id:"JavaScript_skill", content: "JavaScript",porcentage: "80%", value: "80"},
                 {id:"NodeJS_skill", content: "NodeJS / ExpressJS",porcentage: "75%", value: "75"},
                 // {id:"ExpressJS_skill", content: "ExpressJS",porcentage: "75%", value: "75"},
                 {id:"MongoDB_skill", content: "MongoDB",porcentage: "75%", value: "75"},
                 {id:"ReactJS_skill", content: "ReactJS",porcentage: "75%", value: "75"},
-                {id:"ReactNative_skill", content: "React Native",porcentage: "50%", value: "50"},
                 {id:"Python_skill", content: "Python",porcentage: "70%", value: "70"},
+                {id:"ReactNative_skill", content: "React Native",porcentage: "50%", value: "50"},
             ],
             about_me:[
                 {id: "first-p-about",content: "I am a third year student in Computer Science and Engineering(CSE) who loves to transform ideas into reality using code. I am passionate about using Javascript."},

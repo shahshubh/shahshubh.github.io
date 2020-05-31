@@ -998,3 +998,15 @@ BUTTON
     bottom: 15px;
   }
 }
+
+
+/* Technologies used  */
+
+span.s-projects-tech{
+  background-color: #0078ff;
+  color: white;
+  padding: 3px;
+  border-radius: 6px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
