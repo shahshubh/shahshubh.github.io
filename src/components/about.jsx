@@ -13,8 +13,8 @@ class About extends React.Component{
                 {id:"NodeJS_skill", content: "NodeJS / ExpressJS",porcentage: "75%", value: "75"},
                 // {id:"ExpressJS_skill", content: "ExpressJS",porcentage: "75%", value: "75"},
                 {id:"MongoDB_skill", content: "MongoDB",porcentage: "75%", value: "75"},
-                {id:"ReactJS_skill", content: "ReactJS",porcentage: "80%", value: "80"},
-                {id:"ReactNative_skill", content: "React Native",porcentage: "70%", value: "70"},
+                {id:"ReactJS_skill", content: "ReactJS",porcentage: "75%", value: "75"},
+                {id:"ReactNative_skill", content: "React Native",porcentage: "50%", value: "50"},
                 {id:"Python_skill", content: "Python",porcentage: "70%", value: "70"},
             ],
             about_me:[
@@ -37,7 +37,9 @@ class About extends React.Component{
                                         <div className="row">
                                             <div className="col-sm-6 col-md-5" style={{margin: "0 auto"}}>
                                                 <div className="about-img" style={{textAlign: "center"}}>
-                                                    <img src={myImage} className="img-fluid rounded b-shadow-a" alt="profile-pic"/>
+                                                    <a href={myImage } data-lightbox="gallery-vmarine">
+                                                        <img src={myImage} className="img-fluid rounded b-shadow-a" alt="profile-pic"/>
+                                                    </a>
                                                 </div>
                                             </div>
                                             {/* <div className="col-sm-6 col-md-7">

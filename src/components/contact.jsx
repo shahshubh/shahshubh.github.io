@@ -66,11 +66,12 @@ class Contact extends React.Component{
                                     Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.<br />
                                     Simply fill the from and send me an email.
                                 </p>
-                                {/* <!-- <ul class="list-ico">
-                                <li><span class="ion-ios-location"></span> 329 WASHINGTON ST BOSTON, MA 02108</li>
-                                <li><span class="ion-ios-telephone"></span> (617) 557-0089</li>
-                                <li><span class="ion-email"></span> contact@example.com</li>
-                                </ul> --> */}
+                                <ul class="list-ico">
+                                    <li><span class="ion-ios-location"></span> Mulund, Mumbai IN </li>
+                                    <li><span class="ion-ios-telephone"></span> +91-7021624827 </li>
+                                    <li><span class="ion-email"></span> shahshubh1010@gmail.com</li>
+                                    {/* <li><span class="ion-email"></span> shubh.as@somaiya.edu</li> */}
+                                </ul>
                             </div>
                             <div className="socials">
                                 <ul>
