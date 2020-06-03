@@ -1002,11 +1002,19 @@ BUTTON
 
 /* Technologies used  */
 
+.w-more{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 span.s-projects-tech{
   background-color: #0078ff;
-  color: white;
-  padding: 3px;
+  color: white !important;
+  padding: 5px;
   border-radius: 6px;
-  margin-right: 5px;
-  margin-top: 5px;
+  margin: 2px;
+}
+
+.col-md-4{
+  display: flex;
 }

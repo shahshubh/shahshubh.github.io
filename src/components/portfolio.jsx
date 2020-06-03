@@ -67,20 +67,35 @@ class Portfolio extends React.Component{
                                 <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-social-github"></i> 
                               </a>
                             </h2>
-                            <div className="w-more">
-                              <span className="w-ctegory">REACTJS  NODEJS  EXPRESSJS  MONGODB  BOOTSTRAP-MATERIAL</span> {/*/ <span className="w-date">18 Sep. 2018</span>*/}
+                            <div className="w-more mb-3">
+                              <span>This is a social networking webapp similar to Instagram. </span>
                             </div>
+                            
+
 
                           </div>
                           <div className="col-sm-4">
-                          <a href={socialApp1} data-lightbox="gallery-vmarine">
-                              <div className="w-like">
-                                <span className="ion-ios-plus-outline"></span>
-                              </div>
-                          </a>
+                            <a href={socialApp1} data-lightbox="gallery-vmarine">
+                                <div className="w-like">
+                                  <span className="ion-ios-plus-outline"></span>
+                                </div>
+                            </a>
                           </div>
-
                         </div>
+
+                        <div className="row">
+                          <div className="col-sm-12">
+                            <div className="w-more">
+                              <span className="w-ctegory s-projects-tech">REACTJS</span>
+                              <span className="w-ctegory s-projects-tech">NODEJS</span>
+                              <span className="w-ctegory s-projects-tech">EXPRESSJS</span>
+                              <span className="w-ctegory s-projects-tech">MONGODB</span>
+                              <span className="w-ctegory s-projects-tech">BOOTSTRAP-MATERIAL</span>
+                            </div>
+                          </div>
+                        </div>
+
+
                       </div>
                       
                       <a href={socialApp2} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
@@ -94,7 +109,7 @@ class Portfolio extends React.Component{
                 <div className="col-md-4">
                   <div className="work-box">
                     <a href={medeasy} data-lightbox="gallery-vmarine">
-                      <div style={{ height:"165px", width: "350px" }} className="work-img">
+                      <div style={{ height:"165px" }} className="work-img">
                         <img src={medeasy} alt="" className="img-fluid"/>
                       </div>
                     </a>
@@ -111,8 +126,8 @@ class Portfolio extends React.Component{
                               </a>
 
                             </h2>
-                            <div className="w-more">
-                              <span className="w-ctegory">HTML  CSS  BOOTSTRAP  JAVASCRIPT   NODEJS  EXPRESSJS  MONGODB  </span> {/*/ <span className="w-date">18 Sep. 2018</span>*/}
+                            <div className="w-more mb-3">
+                              <span>MedEasy is an E-commerce website for medicines. </span>
                             </div>
                           </div>
                           <div className="col-sm-4">
@@ -121,6 +136,19 @@ class Portfolio extends React.Component{
                                 <span className="ion-ios-plus-outline"></span>
                               </div>
                           </a>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-sm-12">
+                          <div className="w-more">
+                              <span className="w-ctegory s-projects-tech">HTML</span>
+                              <span className="w-ctegory s-projects-tech">CSS</span>
+                              <span className="w-ctegory s-projects-tech">BOOTSTRAP</span>
+                              <span className="w-ctegory s-projects-tech">JAVASCRIPT</span>
+                              <span className="w-ctegory s-projects-tech">NODEJS</span>
+                              <span className="w-ctegory s-projects-tech">EXPRESSJS</span>
+                              <span className="w-ctegory s-projects-tech">MONGODB</span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -136,7 +164,7 @@ class Portfolio extends React.Component{
                 <div className="col-md-4">
                   <div className="work-box">
                     <a href={chatapp1} data-lightbox="gallery-vmarine">
-                      <div style={{ height:"165px", width: "350px" }} className="work-img">
+                      <div className="work-img">
                         <img src={chatapp1} alt="" className="img-fluid"/>
                       </div>
                     </a>
@@ -152,18 +180,31 @@ class Portfolio extends React.Component{
                                 <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-social-github"></i> 
                               </a>
                             </h2>
-                            <div className="w-more">
-                              <span className="w-ctegory">REACTJS   NODEJS  EXPRESSJS  SOCKET.IO </span> {/*/ <span className="w-date">18 Sep. 2018</span>*/}
+                            <div className="w-more mb-3">
+                              <span>This is a Realtime chat app where users can join any room to chat.</span>
                             </div>
+                            
                           </div>
                           <div className="col-sm-4">
-                          <a href={chatapp} data-lightbox="gallery-vmarine">
-                              <div className="w-like">
-                                <span className="ion-ios-plus-outline"></span>
-                              </div>
-                          </a>
+                            <a href={chatapp} data-lightbox="gallery-vmarine">
+                                <div className="w-like">
+                                  <span className="ion-ios-plus-outline"></span>
+                                </div>
+                            </a>
                           </div>
                         </div>
+                        <div className="row">
+                          <div className="col-sm-12">
+                            <div className="w-more">
+                              <span className="w-ctegory s-projects-tech">REACTJS</span>
+                              <span className="w-ctegory s-projects-tech">NODEJS</span>
+                              <span className="w-ctegory s-projects-tech">EXPRESSJS</span>
+                              <span className="w-ctegory s-projects-tech">SOCKET.IO</span>
+                            </div>
+                          </div>
+                        </div>
+
+
                       </div>
                       
                   </div>
@@ -174,7 +215,7 @@ class Portfolio extends React.Component{
                 <div className="col-md-4">
                   <div className="work-box">
                     <a href={predimage} data-lightbox="gallery-vmarine">
-                      <div style={{ height:"165px", width: "350px" }} className="work-img">
+                      <div className="work-img">
                         <img src={predimage} alt="" className="img-fluid"/>
                       </div>
                     </a>
@@ -190,24 +231,43 @@ class Portfolio extends React.Component{
                                 <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-social-github"></i> 
                               </a>
                             </h2>
-                            <div className="w-more">
-                              <span className="w-ctegory">BOOTSTRAP  NODEJS  JAVASCRIPT  FLASK  TENSORFLOW  OPENCV  KERAS-CNN  </span> {/*/ <span className="w-date">18 Sep. 2018</span>*/}
+                            <div className="w-more mb-3">
+                              <span>PredImage is a webapp to predict images. This project was made in 24hrs at DJCSI Hackathon CODESHASTRA 6.0. </span>
                             </div>
+                           
                           </div>
                           <div className="col-sm-4">
-                          <a href={predimage1} data-lightbox="gallery-vmarine">
-                              <div className="w-like">
-                                <span className="ion-ios-plus-outline"></span>
-                              </div>
-                          </a>
+                            <a href={predimage1} data-lightbox="gallery-vmarine">
+                                <div className="w-like">
+                                  <span className="ion-ios-plus-outline"></span>
+                                </div>
+                            </a>
                           </div>
                         </div>
+
+                        <div className="row">
+                          <div className="col-sm-12">
+                            <div className="w-more">
+                              <span className="w-ctegory s-projects-tech">BOOTSTRAP</span>
+                              <span className="w-ctegory s-projects-tech" >NODEJS</span>
+                              <span className="w-ctegory s-projects-tech" >JAVASCRIPT</span>
+                              <span className="w-ctegory s-projects-tech" >FLASK</span>
+                              <span className="w-ctegory s-projects-tech" >TENSORFLOW</span>
+                              <span className="w-ctegory s-projects-tech" >OPENCV</span>
+                              <span className="w-ctegory s-projects-tech" >KERAS-CNN</span>
+                            </div>
+                          </div>
+                        </div>
+
+
                       </div>
                       
                       <a href={predimage2} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
                       <a href={predimage3} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
                   </div>
                 </div>
+
+                
 
                 
               </div>
