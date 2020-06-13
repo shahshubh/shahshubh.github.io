@@ -176,6 +176,20 @@ a:hover {
   bottom: -12px;
 }
 
+.title-skill {
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.title-skill:before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  background-color: #0078ff;
+  width: 70px;
+  bottom: -12px;
+}
+
 /* Box */
 
 .box-pl2 {

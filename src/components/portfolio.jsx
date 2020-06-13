@@ -45,6 +45,11 @@ class Portfolio extends React.Component{
                     </p>
                     <div className="line-mf"></div>
                   </div>
+                  {/* <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center'  }} >
+                    <div>All</div>
+                    <div>Website</div>
+                    <div>Native Apps</div>
+                  </div> */}
                 </div>
               </div>
               <div className="row">
@@ -108,7 +113,7 @@ class Portfolio extends React.Component{
 
                 <div className="col-md-4">
                   <div className="work-box">
-                    <a href={medeasy} data-lightbox="gallery-vmarine">
+                    <a href={medeasy} data-lightbox="gallery-medeasy">
                       <div style={{ height:"165px" }} className="work-img">
                         <img src={medeasy} alt="" className="img-fluid"/>
                       </div>
@@ -131,7 +136,7 @@ class Portfolio extends React.Component{
                             </div>
                           </div>
                           <div className="col-sm-4">
-                          <a href={medeasy1} data-lightbox="gallery-vmarine">
+                          <a href={medeasy1} data-lightbox="gallery-medeasy">
                               <div className="w-like">
                                 <span className="ion-ios-plus-outline"></span>
                               </div>
@@ -153,17 +158,17 @@ class Portfolio extends React.Component{
                         </div>
                       </div>
                       
-                      <a href={medeasy2} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={medeasy3} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={medeasy4} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={medeasy5} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={medeasy6} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={medeasy2} data-lightbox="gallery-medeasy" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={medeasy3} data-lightbox="gallery-medeasy" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={medeasy4} data-lightbox="gallery-medeasy" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={medeasy5} data-lightbox="gallery-medeasy" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={medeasy6} data-lightbox="gallery-medeasy" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
                   </div>
                 </div>
 
                 <div className="col-md-4">
                   <div className="work-box">
-                    <a href={chatapp1} data-lightbox="gallery-vmarine">
+                    <a href={chatapp1} data-lightbox="gallery-chatapp">
                       <div className="work-img">
                         <img src={chatapp1} alt="" className="img-fluid"/>
                       </div>
@@ -186,7 +191,7 @@ class Portfolio extends React.Component{
                             
                           </div>
                           <div className="col-sm-4">
-                            <a href={chatapp} data-lightbox="gallery-vmarine">
+                            <a href={chatapp} data-lightbox="gallery-chatapp">
                                 <div className="w-like">
                                   <span className="ion-ios-plus-outline"></span>
                                 </div>
@@ -214,7 +219,7 @@ class Portfolio extends React.Component{
 
                 <div className="col-md-4">
                   <div className="work-box">
-                    <a href={predimage} data-lightbox="gallery-vmarine">
+                    <a href={predimage} data-lightbox="gallery-predimage">
                       <div className="work-img">
                         <img src={predimage} alt="" className="img-fluid"/>
                       </div>
@@ -234,10 +239,9 @@ class Portfolio extends React.Component{
                             <div className="w-more mb-3">
                               <span>PredImage is a webapp to predict images. This project was made in 24hrs at DJCSI Hackathon CODESHASTRA 6.0. </span>
                             </div>
-                           
                           </div>
                           <div className="col-sm-4">
-                            <a href={predimage1} data-lightbox="gallery-vmarine">
+                            <a href={predimage1} data-lightbox="gallery-predimage">
                                 <div className="w-like">
                                   <span className="ion-ios-plus-outline"></span>
                                 </div>
@@ -262,8 +266,8 @@ class Portfolio extends React.Component{
 
                       </div>
                       
-                      <a href={predimage2} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={predimage3} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={predimage2} data-lightbox="gallery-predimage" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
+                      <a href={predimage3} data-lightbox="gallery-predimage" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
                   </div>
                 </div>
 
