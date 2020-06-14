@@ -122,7 +122,14 @@ a:hover {
 }
 
 .sect-mt4 {
-  margin-top: 4rem;
+  padding-top: 4rem;
+}
+
+.timeline-section{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: #e3e3e3;
+
 }
 
 /* Title S */
@@ -136,11 +143,17 @@ a:hover {
 /* Title A */
 
 .title-box {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .title-a {
   font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.title-a-timeline {
+  font-size: 2.25rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -151,6 +164,14 @@ a:hover {
 
 .line-mf {
   width: 40px;
+  height: 5px;
+  background-color: #0078ff;
+  margin: 0 auto;
+}
+
+
+.line-mf-timeline {
+  width: 120px;
   height: 5px;
   background-color: #0078ff;
   margin: 0 auto;
@@ -515,7 +536,7 @@ NAVBAR
 
 .navbar-b .navbar-brand {
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
@@ -1031,4 +1052,43 @@ span.s-projects-tech{
 
 .col-md-4{
   display: flex;
+}
+
+
+/*------------------------------------*/
+
+
+.s-project{
+  animation-name: zoomIn;
+  animation-duration: .75s;
+}
+
+ul.nav.nav-tabs{
+  margin-bottom: 2rem;
+  justify-content: center;
+  border-bottom: none;
+}
+
+.nav-tabs .nav-item{
+  margin: 10px;
+}
+
+.nav-tabs .nav-link{
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.nav-tabs .nav-link.active{
+  background-color: #0078ff;
+  color: #fff;
+  border: none;
+}
+
+.nav-tabs .nav-link.active:hover{
+  color: #fff !important ;
+}
+
+
+.nav-tabs .nav-link:hover{
+  color: rgba(78,78,78) !important;
 }

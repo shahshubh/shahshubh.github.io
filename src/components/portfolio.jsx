@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {Tabs, Tab} from 'react-bootstrap-tabs';
+
 //import socialApp
 import socialApp from '../img/socialapp/home.PNG';
 import socialApp1 from '../img/socialapp/comments.PNG';
@@ -26,18 +28,102 @@ import predimage from '../img/predimage/Capture.PNG'
 import predimage1 from '../img/predimage/screen1.PNG'
 import predimage2 from '../img/predimage/screen2.PNG'
 import predimage3 from '../img/predimage/screen4.PNG'
+import Projects from './projects';
 
 
 class Portfolio extends React.Component{
+    constructor(){
+      super();
+      this.state = {
+        projects: [
 
+          {
+            title: "SocialApp",
+            webLink: "https://sociallappp.herokuapp.com/",
+            githubLink: "https://github.com/shahshubh/socialApp-MERN",
+            description:
+              "This is a social networking webapp similar to Instagram.",
+            stack: [
+              "REACTJS",
+              "NODEJS",
+              "EXPRESSJS",
+              "MONGODB",
+              "BOOTSTRAP-MATERIAL",
+            ],
+            image: socialApp,
+            image1: socialApp1,
+            images: [socialApp2, socialApp3, socialApp4, socialApp5],
+            dataLightbox: "gallery-socialapp",
+            type: "web"
+          },
+          {
+            title: "MedEasy",
+            webLink: "https://medeasyy.herokuapp.com/",
+            githubLink: "https://github.com/shahshubh/medEasy",
+            description: "MedEasy is an E-commerce website for medicines.",
+            stack: [
+              "HTML",
+              "CSS",
+              "BOOTSTRAP",
+              "JAVASCRIPT",
+              "NODEJS",
+              "EXPRESSJS",
+              "MONGODB",
+            ],
+            image: medeasy,
+            image1: medeasy1,
+            images: [medeasy2, medeasy3, medeasy4, medeasy5, medeasy6],
+            dataLightbox: "gallery-medeasy",
+            type: "web"
+          },
+          {
+            title: "Chat-App",
+            webLink: "https://chat-appln.netlify.com/",
+            githubLink: "https://github.com/shahshubh/chat-app",
+            description:
+              "This is a Realtime chat app where users can join any room to chat.",
+            stack: ["REACTJS", "NODEJS", "EXPRESSJS", "SOCKET.IO"],
+            image: chatapp1,
+            image1: chatapp,
+            images: [],
+            dataLightbox: "gallery-chatapp",
+            type: "web"
+          },
+          {
+            title: "predImage - model trainer ",
+            webLink: "https://github.com/shahshubh/model-trainer",
+            githubLink: "https://github.com/shahshubh/model-trainer",
+            description:
+              "PredImage is a webapp to predict images. This project was made in 24hrs at DJCSI Hackathon CODESHASTRA 6.0. ",
+            stack: [
+              "BOOTSTRAP",
+              "NODEJS",
+              "JAVASCRIPT",
+              "FLASK",
+              "TENSORFLOW",
+              "OPENCV",
+              "KERAS-CNN",
+            ],
+            image: predimage,
+            image1: predimage1,
+            images: [predimage2, predimage3],
+            dataLightbox: "gallery-predimage",
+            type: "ml/dl"
+          },
+
+        ],
+
+      }
+    }
     render(){
+
         return (
           <section id="work" className="portfolio-mf sect-pt4 route">
             <div className="container">
               <div className="row">
                 <div className="col-sm-12">
                   <div className="title-box text-center">
-                    <h3 className="title-a">
+                    <h3 className="title-a s-port ">
                       Portfolio
                     </h3>
                     <p className="subtitle-a">
@@ -52,229 +138,22 @@ class Portfolio extends React.Component{
                   </div> */}
                 </div>
               </div>
-              <div className="row">
-                <div className="col-md-4">
-                  <div className="work-box">
-                    <a href={socialApp} data-lightbox="gallery-vmarine">
-                      <div className="work-img">
-                        <img src={socialApp} alt="" className="img-fluid"/>
-                      </div>
-                    </a>
-                      <div className="work-content">
-                        <div className="row">
-                          <div className="col-sm-8">
-                            <h2 className="w-title">
-                              <a href="https://sociallappp.herokuapp.com/">
-                                SocialApp 
-                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-link"></i> 
-                              </a>
-                              <a href="https://github.com/shahshubh/socialApp-MERN">
-                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-social-github"></i> 
-                              </a>
-                            </h2>
-                            <div className="w-more mb-3">
-                              <span>This is a social networking webapp similar to Instagram. </span>
-                            </div>
-                            
 
+              <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
+                <Tab label="All">
+                  <Projects projects={this.state.projects} type="All" />
+                </Tab>
+                <Tab label="Web Developement">
+                  <Projects projects={this.state.projects} type="web" />
+                </Tab>
+                <Tab label="App Developement">
+                  <Projects projects={this.state.projects} type="app" />
+                </Tab>
+                <Tab label="ML/DL">
+                  <Projects projects={this.state.projects} type="ml/dl" />
+                </Tab>
+            </Tabs>
 
-                          </div>
-                          <div className="col-sm-4">
-                            <a href={socialApp1} data-lightbox="gallery-vmarine">
-                                <div className="w-like">
-                                  <span className="ion-ios-plus-outline"></span>
-                                </div>
-                            </a>
-                          </div>
-                        </div>
-
-                        <div className="row">
-                          <div className="col-sm-12">
-                            <div className="w-more">
-                              <span className="w-ctegory s-projects-tech">REACTJS</span>
-                              <span className="w-ctegory s-projects-tech">NODEJS</span>
-                              <span className="w-ctegory s-projects-tech">EXPRESSJS</span>
-                              <span className="w-ctegory s-projects-tech">MONGODB</span>
-                              <span className="w-ctegory s-projects-tech">BOOTSTRAP-MATERIAL</span>
-                            </div>
-                          </div>
-                        </div>
-
-
-                      </div>
-                      
-                      <a href={socialApp2} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={socialApp3} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={socialApp4} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={socialApp5} data-lightbox="gallery-vmarine" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                  </div>
-                </div>
-
-
-                <div className="col-md-4">
-                  <div className="work-box">
-                    <a href={medeasy} data-lightbox="gallery-medeasy">
-                      <div style={{ height:"165px" }} className="work-img">
-                        <img src={medeasy} alt="" className="img-fluid"/>
-                      </div>
-                    </a>
-                      <div className="work-content">
-                        <div className="row">
-                          <div className="col-sm-8">
-                            <h2 className="w-title">
-                              <a href="https://medeasyy.herokuapp.com/">
-                                MedEasy 
-                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-link"></i> 
-                              </a>
-                              <a href="https://github.com/shahshubh/medEasy">
-                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-social-github"></i> 
-                              </a>
-
-                            </h2>
-                            <div className="w-more mb-3">
-                              <span>MedEasy is an E-commerce website for medicines. </span>
-                            </div>
-                          </div>
-                          <div className="col-sm-4">
-                          <a href={medeasy1} data-lightbox="gallery-medeasy">
-                              <div className="w-like">
-                                <span className="ion-ios-plus-outline"></span>
-                              </div>
-                          </a>
-                          </div>
-                        </div>
-                        <div className="row">
-                          <div className="col-sm-12">
-                          <div className="w-more">
-                              <span className="w-ctegory s-projects-tech">HTML</span>
-                              <span className="w-ctegory s-projects-tech">CSS</span>
-                              <span className="w-ctegory s-projects-tech">BOOTSTRAP</span>
-                              <span className="w-ctegory s-projects-tech">JAVASCRIPT</span>
-                              <span className="w-ctegory s-projects-tech">NODEJS</span>
-                              <span className="w-ctegory s-projects-tech">EXPRESSJS</span>
-                              <span className="w-ctegory s-projects-tech">MONGODB</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <a href={medeasy2} data-lightbox="gallery-medeasy" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={medeasy3} data-lightbox="gallery-medeasy" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={medeasy4} data-lightbox="gallery-medeasy" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={medeasy5} data-lightbox="gallery-medeasy" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={medeasy6} data-lightbox="gallery-medeasy" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                  </div>
-                </div>
-
-                <div className="col-md-4">
-                  <div className="work-box">
-                    <a href={chatapp1} data-lightbox="gallery-chatapp">
-                      <div className="work-img">
-                        <img src={chatapp1} alt="" className="img-fluid"/>
-                      </div>
-                    </a>
-                      <div className="work-content">
-                        <div className="row">
-                          <div className="col-sm-8">
-                            <h2 className="w-title">
-                              <a href="https://chat-appln.netlify.com/">
-                                Chat-App 
-                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-link"></i> 
-                              </a>
-                              <a href="https://github.com/shahshubh/chat-app">
-                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-social-github"></i> 
-                              </a>
-                            </h2>
-                            <div className="w-more mb-3">
-                              <span>This is a Realtime chat app where users can join any room to chat.</span>
-                            </div>
-                            
-                          </div>
-                          <div className="col-sm-4">
-                            <a href={chatapp} data-lightbox="gallery-chatapp">
-                                <div className="w-like">
-                                  <span className="ion-ios-plus-outline"></span>
-                                </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="row">
-                          <div className="col-sm-12">
-                            <div className="w-more">
-                              <span className="w-ctegory s-projects-tech">REACTJS</span>
-                              <span className="w-ctegory s-projects-tech">NODEJS</span>
-                              <span className="w-ctegory s-projects-tech">EXPRESSJS</span>
-                              <span className="w-ctegory s-projects-tech">SOCKET.IO</span>
-                            </div>
-                          </div>
-                        </div>
-
-
-                      </div>
-                      
-                  </div>
-                </div>
-
-
-
-                <div className="col-md-4">
-                  <div className="work-box">
-                    <a href={predimage} data-lightbox="gallery-predimage">
-                      <div className="work-img">
-                        <img src={predimage} alt="" className="img-fluid"/>
-                      </div>
-                    </a>
-                      <div className="work-content">
-                        <div className="row">
-                          <div className="col-sm-8">
-                            <h2 className="w-title">
-                              <a href="https://github.com/shahshubh/model-trainer">
-                                predImage - model trainer 
-                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-link"></i> 
-                              </a>
-                              <a href="https://github.com/shahshubh/model-trainer">
-                                <i style={{ fontSize: "24px", marginLeft: "10px" }} className="ion-social-github"></i> 
-                              </a>
-                            </h2>
-                            <div className="w-more mb-3">
-                              <span>PredImage is a webapp to predict images. This project was made in 24hrs at DJCSI Hackathon CODESHASTRA 6.0. </span>
-                            </div>
-                          </div>
-                          <div className="col-sm-4">
-                            <a href={predimage1} data-lightbox="gallery-predimage">
-                                <div className="w-like">
-                                  <span className="ion-ios-plus-outline"></span>
-                                </div>
-                            </a>
-                          </div>
-                        </div>
-
-                        <div className="row">
-                          <div className="col-sm-12">
-                            <div className="w-more">
-                              <span className="w-ctegory s-projects-tech">BOOTSTRAP</span>
-                              <span className="w-ctegory s-projects-tech" >NODEJS</span>
-                              <span className="w-ctegory s-projects-tech" >JAVASCRIPT</span>
-                              <span className="w-ctegory s-projects-tech" >FLASK</span>
-                              <span className="w-ctegory s-projects-tech" >TENSORFLOW</span>
-                              <span className="w-ctegory s-projects-tech" >OPENCV</span>
-                              <span className="w-ctegory s-projects-tech" >KERAS-CNN</span>
-                            </div>
-                          </div>
-                        </div>
-
-
-                      </div>
-                      
-                      <a href={predimage2} data-lightbox="gallery-predimage" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                      <a href={predimage3} data-lightbox="gallery-predimage" style={{display: "none"}}>jsx-a11y/anchor-has-content warning</a>
-                  </div>
-                </div>
-
-                
-
-                
-              </div>
             </div>
           </section>
         );
