@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8b8f9a03d01c59cdbd4b2b3a7895f269",
+    "revision": "3c3ea3e692230634158eebeaef4fa844",
     "url": "/index.html"
   },
   {
-    "revision": "c4a50a80170149c3ed57",
-    "url": "/static/css/2.58de8a3d.chunk.css"
+    "revision": "85ec3bfdceab41877558",
+    "url": "/static/css/2.a8a8b3aa.chunk.css"
   },
   {
-    "revision": "5ce6ecd0f79253947ce9",
-    "url": "/static/css/main.79c5d87c.chunk.css"
+    "revision": "6cdfd521d6818cede5f7",
+    "url": "/static/css/main.d451da81.chunk.css"
   },
   {
-    "revision": "c4a50a80170149c3ed57",
-    "url": "/static/js/2.cfb501a8.chunk.js"
+    "revision": "85ec3bfdceab41877558",
+    "url": "/static/js/2.9f750da5.chunk.js"
   },
   {
-    "revision": "5ce6ecd0f79253947ce9",
-    "url": "/static/js/main.65f5a1b0.chunk.js"
+    "revision": "6cdfd521d6818cede5f7",
+    "url": "/static/js/main.45f1f346.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -34,10 +34,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "be16f3823e292b627d39349e3a5d1d41",
     "url": "/static/media/Capture.be16f382.PNG"
-  },
-  {
-    "revision": "964e193b37496fd22ba3cf6b12e063a4",
-    "url": "/static/media/Shubh Resume.964e193b.pdf"
   },
   {
     "revision": "fc4906f6baa73864256396ffa1b2a104",
@@ -60,8 +56,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/confirm.f1d42352.PNG"
   },
   {
-    "revision": "7eaf14244ca8341c40656f3fc21f2e08",
-    "url": "/static/media/dashboard.7eaf1424.png"
+    "revision": "ed4199176ce8fab1a45c9ff8f2af7e14",
+    "url": "/static/media/dashboard-cropped2.ed419917.png"
   },
   {
     "revision": "67af05e12311bac06327b43ca31e166b",
@@ -112,12 +108,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/ionicons.621bd386.svg"
   },
   {
-    "revision": "a64a1102c8a389787a6b7be8c446e79a",
-    "url": "/static/media/logo_2.a64a1102.jpg"
+    "revision": "acb8a2742e725e2d2b777fb456e33304",
+    "url": "/static/media/logo-blue.acb8a274.png"
   },
   {
-    "revision": "964f510edb686bec01ecb3a0249ff2fd",
-    "url": "/static/media/logo_white_final.964f510e.jpg"
+    "revision": "9993cc1df298a0fe24accbdc1b25739e",
+    "url": "/static/media/logo-white.9993cc1d.png"
+  },
+  {
+    "revision": "935ada2bdf271fa6db4e60cd3a94baff",
+    "url": "/static/media/movie1.935ada2b.PNG"
+  },
+  {
+    "revision": "0c37e7f806ab7935abbae5e0726f6d69",
+    "url": "/static/media/movie2.0c37e7f8.PNG"
+  },
+  {
+    "revision": "0f06c4cbb9e16d2e1c3caab8233d7523",
+    "url": "/static/media/movie3.0f06c4cb.PNG"
   },
   {
     "revision": "881208c78ccf4ca8da3a0961e169f86f",
@@ -154,5 +162,17 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "74315c4d1561d6450be2f265baa243b6",
     "url": "/static/media/shubh_profilepic2.74315c4d.jpg"
+  },
+  {
+    "revision": "82d600fbe7d8dd0515d8befad87e7ab6",
+    "url": "/static/media/spam1.82d600fb.PNG"
+  },
+  {
+    "revision": "27d1b05afb16afe3b7b8dc2f01e11dea",
+    "url": "/static/media/spam2.27d1b05a.PNG"
+  },
+  {
+    "revision": "148b79361b412cade9b5b147259a55ac",
+    "url": "/static/media/spam3.148b7936.PNG"
   }
 ]);
