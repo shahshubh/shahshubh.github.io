@@ -23,7 +23,7 @@ a {
 a:hover {
   color: #0078ff;
   text-decoration: none;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .p-r {
@@ -244,14 +244,14 @@ a:hover {
   line-height: 1.4;
   margin: 0 15px 0 0;
   box-shadow: 0 0 0 3px #0078ff;
-  transition: all 500ms ease;
+  /* transition: all 500ms ease; */
 }
 
 .socials .ico-circle:hover {
   background-color: #0078ff;
   color: #fff;
   box-shadow: 0 0 0 3px #cde1f8;
-  transition: all 500ms ease;
+  /* transition: all 500ms ease; */
 }
 
 /* Ul resect */
@@ -1091,4 +1091,12 @@ ul.nav.nav-tabs{
 
 .nav-tabs .nav-link:hover{
   color: rgba(78,78,78) !important;
+  border: 1px solid #0078ff;
+}
+
+
+
+.vertical-timeline-element-date{
+  font-size: larger !important;
+  font-weight: 700 !important;
 }

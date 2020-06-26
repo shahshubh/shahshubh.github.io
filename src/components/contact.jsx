@@ -67,9 +67,9 @@ class Contact extends React.Component{
                                     Simply fill the from and send me an email.
                                 </p>
                                 <ul class="list-ico">
-                                    <li><span class="ion-ios-location"></span> Mulund, Mumbai IN </li>
-                                    <li><span class="ion-ios-telephone"></span> +91-7021624827 </li>
-                                    <li><span class="ion-email"></span> shahshubh1010@gmail.com</li>
+                                    <li><span class="ion-ios-location"></span> Mumbai, IN </li>
+                                    <a href="tel:+91-7021624827" ><li><span class="ion-ios-telephone"></span> +91-7021624827</li></a>
+                                    <a href="mailto:shahshubh1010@gmail.com"><li><span class="ion-email"></span> shahshubh1010@gmail.com </li></a>
                                     {/* <li><span class="ion-email"></span> shubh.as@somaiya.edu</li> */}
                                 </ul>
                             </div>

@@ -21,7 +21,8 @@ class Intro extends React.Component{
                     <a 
                       className="btn btn-primary btn js-scroll px-4" 
                       style={{ cursor: "pointer" }}
-                      onClick={ () => window.open(require('./Shubh Resume.pdf'), '_none')} 
+                      href= '/files/Shubh_Resume.pdf'
+                      target="_blank"
                     >
                       View My Resume
                     </a>

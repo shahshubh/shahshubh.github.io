@@ -19,13 +19,18 @@ const Projects = (props) => {
                     <div className="row">
                         <div className="col-sm-8">
                             <h2 className="w-title">
-                                <a href={project.webLink}>
-                                    {project.title}
-                                    <i
-                                        style={{ fontSize: "24px", marginLeft: "10px" }}
-                                        className="ion-link"
-                                    ></i>
-                                </a>
+                                { project.webLink ? (
+                                    <a href={project.webLink}>
+                                        {project.title}
+                                        <i
+                                            style={{ fontSize: "24px", marginLeft: "10px" }}
+                                            className="ion-link"
+                                        ></i>
+                                    </a>
+                                ) : (
+                                    project.title
+                                ) }
+                                
                                 <a href={project.githubLink}>
                                     <i
                                         style={{ fontSize: "24px", marginLeft: "10px" }}
@@ -63,11 +68,7 @@ const Projects = (props) => {
                 </div>
 
                 {project.images.map((img, ind) => (
-                    <a
-                        href={img}
-                        data-lightbox={project.dataLightbox}
-                        style={{ display: "none" }}
-                    />
+                    <a href={img} data-lightbox={project.dataLightbox} style={{ display: "none" }} />
                 ))}
             </div>
         </div>

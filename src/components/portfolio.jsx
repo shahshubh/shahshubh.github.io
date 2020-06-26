@@ -11,7 +11,7 @@ import socialApp4 from '../img/socialapp/chat.PNG';
 import socialApp5 from '../img/socialapp/resetpassword.PNG';
 
 //import medeasy
-import medeasy from '../img/medeasy/dashboard.png'
+import medeasy from '../img/medeasy/dashboard-cropped2.png'
 import medeasy1 from '../img/medeasy/admin-orders.png'
 import medeasy2 from '../img/medeasy/pending-orders.png'
 import medeasy3 from '../img/medeasy/home.png'
@@ -28,6 +28,19 @@ import predimage from '../img/predimage/Capture.PNG'
 import predimage1 from '../img/predimage/screen1.PNG'
 import predimage2 from '../img/predimage/screen2.PNG'
 import predimage3 from '../img/predimage/screen4.PNG'
+
+
+//import spam message
+import spam from '../img/spam-msg/spam1.PNG';
+import spam1 from '../img/spam-msg/spam2.PNG';
+import spam2 from '../img/spam-msg/spam3.PNG';
+
+
+//import movie recommender system
+import movie from '../img/movie-recommender/movie1.PNG';
+import movie1 from '../img/movie-recommender/movie2.PNG';
+import movie2 from '../img/movie-recommender/movie3.PNG';
+
 import Projects from './projects';
 
 
@@ -36,7 +49,6 @@ class Portfolio extends React.Component{
       super();
       this.state = {
         projects: [
-
           {
             title: "SocialApp",
             webLink: "https://sociallappp.herokuapp.com/",
@@ -55,6 +67,39 @@ class Portfolio extends React.Component{
             images: [socialApp2, socialApp3, socialApp4, socialApp5],
             dataLightbox: "gallery-socialapp",
             type: "web"
+          },
+          {
+            title: "Spam Message Classification",
+            githubLink: "https://github.com/shahshubh/spam-message-classification",
+            description: "A Spam Detection Filter for Text Messages using NLP and Naive Bayes.",
+            stack: [
+              "NUMPY",
+              "PANDAS",
+              "SEABORN",
+              "SCIKIT-LEARN",
+              "NLP",
+              "NAIVE-BAYES",
+            ],
+            image: spam,
+            image1: spam1,
+            images: [spam2],
+            dataLightbox: "gallery-spam-msg",
+            type: "ml/dl"
+          },
+          {
+            title: "Movie Recommender System",
+            githubLink: "https://github.com/shahshubh/Machine-Learning-Projects/tree/master/Movie_recommender_system",
+            description: "A basic movie recommender system. It tells you what movies are most similar to your movie choice.",
+            stack: [
+              "NUMPY",
+              "PANDAS",
+              "SEABORN",
+            ],
+            image: movie,
+            image1: movie1,
+            images: [movie2],
+            dataLightbox: "gallery-movie-recommender",
+            type: "ml/dl"
           },
           {
             title: "MedEasy",
@@ -91,7 +136,6 @@ class Portfolio extends React.Component{
           },
           {
             title: "predImage - model trainer ",
-            webLink: "https://github.com/shahshubh/model-trainer",
             githubLink: "https://github.com/shahshubh/model-trainer",
             description:
               "PredImage is a webapp to predict images. This project was made in 24hrs at DJCSI Hackathon CODESHASTRA 6.0. ",
@@ -127,7 +171,7 @@ class Portfolio extends React.Component{
                       Portfolio
                     </h3>
                     <p className="subtitle-a">
-                      Check Out My Latest Projects.
+                      Check Out Few Of My Selected Projects.
                     </p>
                     <div className="line-mf"></div>
                   </div>
@@ -148,6 +192,9 @@ class Portfolio extends React.Component{
                 </Tab>
                 <Tab label="App Developement">
                   <Projects projects={this.state.projects} type="app" />
+                  <h1 className="text-center p-5" >
+                    <i className="ion-minus-round"></i>
+                  </h1>
                 </Tab>
                 <Tab label="ML/DL">
                   <Projects projects={this.state.projects} type="ml/dl" />

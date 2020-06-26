@@ -18,7 +18,7 @@ class About extends React.Component{
             ],
             about_me:[
                 {id: "first-p-about",content: "I am a third year student in Computer Science and Engineering(CSE) who loves to transform ideas into reality using code. I am passionate about using Javascript."},
-                {id: "third-p-about", content: "Motivated developer with experience creating websites and mobile applications. "}
+                {id: "second-p-about", content: "Motivated developer with experience creating websites and mobile applications. "}
             ]
         }
     }
