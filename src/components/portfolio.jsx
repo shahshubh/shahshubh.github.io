@@ -29,17 +29,25 @@ import predimage1 from '../img/predimage/screen1.PNG'
 import predimage2 from '../img/predimage/screen2.PNG'
 import predimage3 from '../img/predimage/screen4.PNG'
 
-
 //import spam message
 import spam from '../img/spam-msg/spam1.PNG';
 import spam1 from '../img/spam-msg/spam2.PNG';
 import spam2 from '../img/spam-msg/spam3.PNG';
 
-
 //import movie recommender system
 import movie from '../img/movie-recommender/movie1.PNG';
 import movie1 from '../img/movie-recommender/movie2.PNG';
 import movie2 from '../img/movie-recommender/movie3.PNG';
+
+// import shop app
+import shopapp from '../img/shop-app/2.png';
+import shopapp1 from '../img/shop-app/1.png';
+import shopapp2 from '../img/shop-app/3.png';
+import shopapp3 from '../img/shop-app/4.png';
+import shopapp4 from '../img/shop-app/5.png';
+import shopapp5 from '../img/shop-app/6.png';
+import shopapp6 from '../img/shop-app/7.png';
+
 
 import Projects from './projects';
 
@@ -49,6 +57,26 @@ class Portfolio extends React.Component{
       super();
       this.state = {
         projects: [
+
+          {
+            title: "ShopApp",
+            
+            githubLink: "https://github.com/shahshubh/Shop-App",
+            description:
+              "An E-commerce shop app in React Native.",
+            stack: [
+              "REACTJS",
+              "REACT-NATIVE",
+              "REDUX",
+              "FIREBASE",
+            ],
+            image: shopapp,
+            image1: shopapp1,
+            images: [shopapp2,shopapp3,shopapp4,shopapp5,shopapp6],
+            dataLightbox: "gallery-shopapp",
+            type: "app"
+          },
+
           {
             title: "SocialApp",
             webLink: "https://sociallappp.herokuapp.com/",
@@ -192,9 +220,6 @@ class Portfolio extends React.Component{
                 </Tab>
                 <Tab label="App Developement">
                   <Projects projects={this.state.projects} type="app" />
-                  <h1 className="text-center p-5" >
-                    <i className="ion-minus-round"></i>
-                  </h1>
                 </Tab>
                 <Tab label="ML/DL">
                   <Projects projects={this.state.projects} type="ml/dl" />

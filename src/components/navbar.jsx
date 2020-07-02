@@ -12,6 +12,7 @@ class Navbar extends React.Component {
 		};
 	}
 
+
 	componentDidMount() {
 		const nav = $("nav");
 		let navHeight = nav.outerHeight();
@@ -19,8 +20,11 @@ class Navbar extends React.Component {
 		$(".navbar-toggler").on("click", function () {
 			if (!$("#mainNav").hasClass("navbar-reduce")) {
 				$("#mainNav").addClass("navbar-reduce");
+				if(this.state.logo === logo1){
+					this.setState({ logo: logo2 })
+				}
 			}
-		});
+		}.bind(this));
 
 		$("body").scrollspy({
 			target: "#mainNav",

@@ -21,10 +21,10 @@ class Intro extends React.Component{
                     <a 
                       className="btn btn-primary btn js-scroll px-4" 
                       style={{ cursor: "pointer" }}
-                      href= '/files/Shubh_Resume.pdf'
+                      href= {`/files/Shubh_Resume.pdf?${new Date().getTime()}`}
                       target="_blank"
                     >
-                      View My Resume
+                      View My Resume <i class="fa fa-download" aria-hidden="true"></i>
                     </a>
                     {/* <a 
                       className="btn btn-primary btn js-scroll px-4 ml-5" 

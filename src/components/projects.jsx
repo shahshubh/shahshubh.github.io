@@ -38,9 +38,7 @@ const Projects = (props) => {
                                     ></i>
                                 </a>
                             </h2>
-                            <div className="w-more mb-3">
-                                <span>{project.description} </span>
-                            </div>
+                            
                         </div>
                         <div className="col-sm-4">
                             <a
@@ -56,6 +54,9 @@ const Projects = (props) => {
 
                     <div className="row">
                         <div className="col-sm-12">
+                            <div className="w-more mb-3" style={{ fontSize: "16px" }} >
+                                <span>{project.description} </span>
+                            </div>
                             <div className="w-more">
                                 {project.stack.map((s, i) => (
                                     <span key={i} className="w-ctegory s-projects-tech">
