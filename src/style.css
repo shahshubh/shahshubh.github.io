@@ -1044,10 +1044,16 @@ BUTTON
 
 span.s-projects-tech{
   background-color: #0078ff;
+  opacity: 0.7;
   color: white !important;
-  padding: 5px;
-  border-radius: 6px;
-  margin: 2px;
+  padding: 9px;
+  border-radius: 20px;
+  margin: 3px;
+}
+
+span.s-projects-tech:hover{
+  opacity: 1;
+  cursor: pointer;
 }
 
 .col-md-4{
