@@ -23,6 +23,7 @@ class Intro extends React.Component{
                       style={{ cursor: "pointer" }}
                       href= {`/files/Shubh_Resume.pdf?${new Date().getTime()}`}
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       View My Resume <i class="fa fa-download" aria-hidden="true"></i>
                     </a>

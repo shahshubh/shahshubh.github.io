@@ -7,7 +7,7 @@ const Projects = (props) => {
         <div key={index} className="col-md-4 s-project">
             <div className="work-box">
                 <a href={project.image} data-lightbox={project.dataLightbox}>
-                    <div style={{ maxHeight: "165px" }} className="work-img">
+                    <div style={{ maxHeight: "200px" }} className="work-img">
                         <img
                             src={project.image}
                             alt={project.title}
@@ -69,7 +69,8 @@ const Projects = (props) => {
                 </div>
 
                 {project.images.map((img, ind) => (
-                    <a href={img} data-lightbox={project.dataLightbox} style={{ display: "none" }} />
+                    <a href={img} data-lightbox={project.dataLightbox} style={{ display: "none" }} >
+                    </a>
                 ))}
             </div>
         </div>

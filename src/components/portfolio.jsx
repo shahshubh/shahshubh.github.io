@@ -49,6 +49,16 @@ import shopapp5 from '../img/shop-app/6.png';
 import shopapp6 from '../img/shop-app/7.png';
 
 
+import socialapp from '../img/socialapp-rn/1.jpg';
+import socialapp1 from '../img/socialapp-rn/2.jpg';
+import socialapp2 from '../img/socialapp-rn/3.jpg';
+import socialapp3 from '../img/socialapp-rn/4.jpg';
+import socialapp4 from '../img/socialapp-rn/5.jpg';
+import socialapp7 from '../img/socialapp-rn/8.jpg';
+import socialapp8 from '../img/socialapp-rn/9.jpg';
+import socialapp10 from '../img/socialapp-rn/11.jpg';
+
+
 import Projects from './projects';
 
 
@@ -57,6 +67,27 @@ class Portfolio extends React.Component{
       super();
       this.state = {
         projects: [
+
+          {
+            title: "SocialApp-RN",
+            webLink: "https://socialapp-serverr.herokuapp.com/static/socialapp-rn-2.apk",
+            githubLink: "https://github.com/shahshubh/SocialApp-React-Native",
+            description:
+              "Social Networking mobile app similar to Instagram in React Native.",
+            stack: [
+              "REACT-NATIVE",
+              "REDUX",
+              "SOCKET.IO",
+              "MONGODB",
+              "NODEJS",
+              "EXPRESS"
+            ],
+            image: socialapp,
+            image1: socialapp1,
+            images: [socialapp2, socialapp3, socialapp4, socialapp7, socialapp8, socialapp10 ],
+            dataLightbox: "gallery-socialapp-rn",
+            type: "app"
+          },
 
           {
             title: "ShopApp",
