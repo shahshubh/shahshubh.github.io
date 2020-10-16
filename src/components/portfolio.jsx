@@ -2,61 +2,62 @@ import React from 'react';
 
 import {Tabs, Tab} from 'react-bootstrap-tabs';
 
-//import socialApp
-import socialApp from '../img/socialapp/home.PNG';
-import socialApp1 from '../img/socialapp/comments.PNG';
-import socialApp2 from '../img/socialapp/profile.png';
-import socialApp3 from '../img/socialapp/confirm.PNG';
-import socialApp4 from '../img/socialapp/chat.PNG';
-import socialApp5 from '../img/socialapp/resetpassword.PNG';
-
-//import medeasy
-import medeasy from '../img/medeasy/dashboard-cropped2.png'
-import medeasy1 from '../img/medeasy/admin-orders.png'
-import medeasy2 from '../img/medeasy/pending-orders.png'
-import medeasy3 from '../img/medeasy/home.png'
-import medeasy4 from '../img/medeasy/cart.PNG'
-import medeasy5 from '../img/medeasy/orders.PNG'
-import medeasy6 from '../img/medeasy/order-details.PNG'
+//import predimage
+import predimage from '../img/predimage/Capture.webp'
+import predimage1 from '../img/predimage/screen1.webp'
+import predimage2 from '../img/predimage/screen2.webp'
+import predimage3 from '../img/predimage/screen4.webp'
 
 // import chatapp
-import chatapp from '../img/chat-app/1.PNG'
-import chatapp1 from '../img/chat-app/2.PNG'
+import chatapp from '../img/chat-app/1.webp'
+import chatapp1 from '../img/chat-app/2.webp'
 
-//import predimage
-import predimage from '../img/predimage/Capture.PNG'
-import predimage1 from '../img/predimage/screen1.PNG'
-import predimage2 from '../img/predimage/screen2.PNG'
-import predimage3 from '../img/predimage/screen4.PNG'
-
-//import spam message
-import spam from '../img/spam-msg/spam1.PNG';
-import spam1 from '../img/spam-msg/spam2.PNG';
-import spam2 from '../img/spam-msg/spam3.PNG';
+//import medeasy
+import medeasy from '../img/medeasy/dashboard-cropped2.webp'
+import medeasy1 from '../img/medeasy/admin-orders.webp'
+import medeasy2 from '../img/medeasy/pending-orders.webp'
+import medeasy3 from '../img/medeasy/home.webp'
+import medeasy4 from '../img/medeasy/cart.webp'
+import medeasy5 from '../img/medeasy/orders.webp'
+import medeasy6 from '../img/medeasy/order-details.webp'
 
 //import movie recommender system
-import movie from '../img/movie-recommender/movie1.PNG';
-import movie1 from '../img/movie-recommender/movie2.PNG';
-import movie2 from '../img/movie-recommender/movie3.PNG';
+import movie from '../img/movie-recommender/movie1.webp';
+import movie1 from '../img/movie-recommender/movie2.webp';
+import movie2 from '../img/movie-recommender/movie3.webp';
+
+//import spam message
+import spam from '../img/spam-msg/spam1.webp';
+import spam1 from '../img/spam-msg/spam2.webp';
+import spam2 from '../img/spam-msg/spam3.webp';
+
+
+//import socialApp
+import socialApp from '../img/socialapp/home.webp';
+import socialApp1 from '../img/socialapp/comments.webp';
+import socialApp2 from '../img/socialapp/profile.webp';
+import socialApp3 from '../img/socialapp/confirm.webp';
+import socialApp4 from '../img/socialapp/chat.webp';
+import socialApp5 from '../img/socialapp/resetpassword.webp';
 
 // import shop app
-import shopapp from '../img/shop-app/2.png';
-import shopapp1 from '../img/shop-app/1.png';
-import shopapp2 from '../img/shop-app/3.png';
-import shopapp3 from '../img/shop-app/4.png';
-import shopapp4 from '../img/shop-app/5.png';
-import shopapp5 from '../img/shop-app/6.png';
-import shopapp6 from '../img/shop-app/7.png';
+import shopapp from '../img/shop-app/2.webp';
+import shopapp1 from '../img/shop-app/1.webp';
+import shopapp2 from '../img/shop-app/3.webp';
+import shopapp3 from '../img/shop-app/4.webp';
+import shopapp4 from '../img/shop-app/5.webp';
+import shopapp5 from '../img/shop-app/6.webp';
+import shopapp6 from '../img/shop-app/7.webp';
 
-
-import socialapp from '../img/socialapp-rn/1.jpg';
-import socialapp1 from '../img/socialapp-rn/2.jpg';
-import socialapp2 from '../img/socialapp-rn/3.jpg';
-import socialapp3 from '../img/socialapp-rn/4.jpg';
-import socialapp4 from '../img/socialapp-rn/5.jpg';
-import socialapp7 from '../img/socialapp-rn/8.jpg';
-import socialapp8 from '../img/socialapp-rn/9.jpg';
-import socialapp10 from '../img/socialapp-rn/11.jpg';
+// socialapp RN
+import socialapp from '../img/socialapp-rn/1.webp';
+import socialapp1 from '../img/socialapp-rn/2.webp';
+import socialapp2 from '../img/socialapp-rn/3.webp';
+import socialapp3 from '../img/socialapp-rn/4.webp';
+import socialapp4 from '../img/socialapp-rn/5.webp';
+import socialapp7 from '../img/socialapp-rn/8.webp';
+import socialapp8 from '../img/socialapp-rn/9.webp';
+import socialapp10 from '../img/socialapp-rn/11.webp';
 
 
 import Projects from './projects';
