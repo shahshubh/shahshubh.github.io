@@ -106,7 +106,7 @@ class Timeline extends Component {
 								</h5>
 								<ul>
 									{item.description.map((d, i) => (
-										<li>{d} </li>
+										<li key={i} >{d} </li>
 									))}
 								</ul>
 							</VerticalTimelineElement>

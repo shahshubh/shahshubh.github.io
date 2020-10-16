@@ -1,18 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 const Projects = (props) => {
+
+    const support_format_webp = () => {
+        let elem = document.createElement('canvas');
+        if (!!(elem.getContext && elem.getContext('2d'))) {
+            // was able or not to get WebP representation
+            return elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+            // setIsWebP(isSupported);
+        }
+        else {
+            // very old browser like IE 8, canvas not supported
+            // setIsWebP(false);
+            return false;
+        }
+    }
+
+    const [isSupported, setIsSupported] = useState(support_format_webp());
 
     const ProjectDiv = ({project, index}) => (
         <div key={index} className="col-md-4 s-project">
             <div className="work-box">
                 <a href={project.image} data-lightbox={project.dataLightbox}>
                     <div style={{ maxHeight: "200px" }} className="work-img">
-                        <img
-                            src={project.image}
-                            alt={project.title}
-                            className="img-fluid"
-                        />
+                        <picture>
+                            <source srcSet={project.imageWebP} type="image/webp" />
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="img-fluid"
+                            />
+                        </picture>
                     </div>
                 </a>
                 <div className="work-content">
@@ -42,7 +61,7 @@ const Projects = (props) => {
                         </div>
                         <div className="col-sm-4">
                             <a
-                                href={project.image1}
+                                href= {isSupported ? project.imageWebP1 : project.image1}
                                 data-lightbox={project.dataLightbox}
                             >
                                 <div className="w-like">
@@ -67,9 +86,13 @@ const Projects = (props) => {
                         </div>
                     </div>
                 </div>
-
-                {project.images.map((img, ind) => (
-                    <a href={img} data-lightbox={project.dataLightbox} style={{ display: "none" }} >
+                
+                { isSupported ? project.imagesWebP.map((img, ind) => (
+                    <a key={ind} href={img} data-lightbox={project.dataLightbox} style={{ display: "none" }} >
+                    </a>
+                )) : 
+                project.images.map((img, ind) => (
+                    <a key={ind} href={img} data-lightbox={project.dataLightbox} style={{ display: "none" }} >
                     </a>
                 ))}
             </div>
@@ -81,11 +104,11 @@ const Projects = (props) => {
 			<div className="row">
                 { props.type === "All" ? (
                     props.projects.map((project, index) => (
-                        <ProjectDiv project={project} index={index} />
+                        <ProjectDiv key={index} project={project} index={index} />
                     ))
                 ) : (
                     props.projects.filter(p => p.type === props.type).map((project, index) => (
-                        <ProjectDiv project={project} index={index} />
+                        <ProjectDiv key={index} project={project} index={index} />
                     ))
                 ) }
 				

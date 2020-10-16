@@ -28,7 +28,7 @@ class Intro extends React.Component{
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      View My Resume <i class="fa fa-download" aria-hidden="true"></i>
+                      View My Resume <i className="fa fa-download" aria-hidden="true"></i>
                     </a>
                     {/* <a 
                       className="btn btn-primary btn js-scroll px-4 ml-5" 
