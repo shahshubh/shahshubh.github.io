@@ -58,6 +58,17 @@ import socialapp7 from '../img/socialapp-rn/8.jpg';
 import socialapp8 from '../img/socialapp-rn/9.jpg';
 import socialapp10 from '../img/socialapp-rn/11.jpg';
 
+//chatify jpg
+import chatify from '../img/chatify/2.jpg';
+import chatify1 from '../img/chatify/3.jpg';
+import chatify2 from '../img/chatify/4.jpg';
+import chatify3 from '../img/chatify/5.jpg';
+import chatify4 from '../img/chatify/6.jpg';
+import chatify5 from '../img/chatify/7.jpg';
+import chatify6 from '../img/chatify/8.jpg';
+import chatify7 from '../img/chatify/9.jpg';
+
+
 
 
 
@@ -120,6 +131,18 @@ import socialappWebP7 from '../img/socialapp-rn/8.webp';
 import socialappWebP8 from '../img/socialapp-rn/9.webp';
 import socialappWebP10 from '../img/socialapp-rn/11.webp';
 
+//chatify
+import chatifyWebP from '../img/chatify/2.webp';
+import chatifyWebP1 from '../img/chatify/3.webp';
+import chatifyWebP2 from '../img/chatify/4.webp';
+import chatifyWebP3 from '../img/chatify/5.webp';
+import chatifyWebP4 from '../img/chatify/6.webp';
+import chatifyWebP5 from '../img/chatify/7.webp';
+import chatifyWebP6 from '../img/chatify/8.webp';
+import chatifyWebP7 from '../img/chatify/9.webp';
+
+
+
 
 
 import Projects from './projects';
@@ -130,6 +153,31 @@ class Portfolio extends React.Component{
       super();
       this.state = {
         projects: [
+
+
+          {
+            title: "Chatify",
+            
+            githubLink: "https://github.com/shahshubh/Chatify-Flutter",
+            description:
+              "Chat Application in flutter.",
+            stack: [
+              "FLUTTER",
+              "FIREBASE",
+              "AGORA-RTC",
+            ],
+
+            image: chatify,
+            image1: chatify1,
+            images: [chatify2, chatify3, chatify4, chatify5, chatify6, chatify7 ],
+
+            imageWebP: chatifyWebP,
+            imageWebP1: chatifyWebP1,
+            imagesWebP: [chatifyWebP2, chatifyWebP3, chatifyWebP4, chatifyWebP5, chatifyWebP6, chatifyWebP7 ],
+
+            dataLightbox: "gallery-chatify",
+            type: "app"
+          },
 
           {
             title: "SocialApp-RN",
@@ -345,16 +393,16 @@ class Portfolio extends React.Component{
               </div>
 
               <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
-                <Tab label="All">
+                <Tab label="All (9)">
                   <Projects projects={this.state.projects} type="All" />
                 </Tab>
-                <Tab label="Web Developement">
+                <Tab label="Web Developement (3)">
                   <Projects projects={this.state.projects} type="web" />
                 </Tab>
-                <Tab label="App Developement">
+                <Tab label="App Developement (3)">
                   <Projects projects={this.state.projects} type="app" />
                 </Tab>
-                <Tab label="ML/DL">
+                <Tab label="ML/DL (3)">
                   <Projects projects={this.state.projects} type="ml/dl" />
                 </Tab>
             </Tabs>
