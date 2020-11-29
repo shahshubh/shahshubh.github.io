@@ -129,7 +129,7 @@ a:hover {
 .timeline-section{
   padding-top: 4rem;
   padding-bottom: 4rem;
-  background: #e3e3e3;
+  /* background: #e3e3e3; */
 
 }
 
@@ -1068,8 +1068,8 @@ span.s-projects-tech:hover{
 
 
 .s-project{
-  animation-name: zoomIn;
-  animation-duration: .75s;
+  animation-name: fadeIn;
+  animation-duration: 1.25s;
 }
 
 ul.nav.nav-tabs{
@@ -1108,4 +1108,10 @@ ul.nav.nav-tabs{
 .vertical-timeline-element-date{
   font-size: larger !important;
   font-weight: 700 !important;
+}
+
+
+
+.vertical-timeline.vertical-timeline--two-columns:before{
+  box-shadow: 2.5px 0px 2px #ddd;
 }

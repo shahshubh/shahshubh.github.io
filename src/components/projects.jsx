@@ -17,7 +17,7 @@ const Projects = (props) => {
         }
     }
 
-    const [isSupported, setIsSupported] = useState(support_format_webp());
+    const [isSupported] = useState(support_format_webp());
 
     const ProjectDiv = ({project, index}) => (
         <div key={index} className="col-md-4 s-project">
@@ -39,7 +39,12 @@ const Projects = (props) => {
                         <div className="col-sm-8">
                             <h2 className="w-title">
                                 { project.webLink ? (
-                                    <a href={project.webLink}>
+                                    <a 
+                                        href={project.webLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+
+                                    >
                                         {project.title}
                                         <i
                                             style={{ fontSize: "24px", marginLeft: "10px" }}
@@ -50,7 +55,11 @@ const Projects = (props) => {
                                     project.title
                                 ) }
                                 
-                                <a href={project.githubLink}>
+                                <a 
+                                    href={project.githubLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     <i
                                         style={{ fontSize: "24px", marginLeft: "10px" }}
                                         className="ion-social-github"

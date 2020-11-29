@@ -68,7 +68,7 @@ class Contact extends React.Component{
                                 </p>
                                 <ul className="list-ico">
                                     <li><span className="ion-ios-location"></span> Mumbai, IN </li>
-                                    <a href="tel:+91-7021624827" ><li><span className="ion-ios-telephone"></span> +91-7021624827</li></a>
+                                    {/* <a href="tel:+91-7021624827" ><li><span className="ion-ios-telephone"></span> +91-7021624827</li></a> */}
                                     <a href="mailto:shahshubh1010@gmail.com"><li><span className="ion-email"></span> shahshubh1010@gmail.com </li></a>
                                     {/* <li><span class="ion-email"></span> shubh.as@somaiya.edu</li> */}
                                 </ul>
