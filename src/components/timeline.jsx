@@ -50,7 +50,7 @@ class Timeline extends Component {
 					role: "B.Tech",
 					company: "K.J. Somaiya College of Engineering (KJSCE)",
 					time: "08/2018 - Present",
-					description: ["Computer Engg."],
+					description: ["Computer Engg.", "9.48 GPA in SEM IV"],
 					icon: <FaGraduationCap />,
 					iconBackgroundColor: "rgb(16, 204, 82)",
 					iconColor: "#fff",
