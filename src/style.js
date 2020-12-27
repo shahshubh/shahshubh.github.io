@@ -485,7 +485,7 @@ a.timeline-link-icon:hover{
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #fff;
+  background: ${({ theme }) => theme.container};
 }
 
 #preloader:before {
