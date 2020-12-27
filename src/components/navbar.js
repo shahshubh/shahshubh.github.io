@@ -4,12 +4,17 @@ import $ from "jquery";
 import logo1 from "../img/logo-white.png";
 import logo2 from "../img/logo-blue.png";
 
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
+
+
 class Navbar extends React.Component {
-	constructor() {
+	constructor(props) {
 		super();
 		this.state = {
 			logo: logo1,
+			isDarkTheme: props.currTheme === "light" ? false : true
 		};
+		console.log(props.currTheme);
 	}
 
 
@@ -83,6 +88,13 @@ class Navbar extends React.Component {
 		});
 	}
 
+	onThemeChange(){
+		this.props.toggleTheme();
+		this.setState({
+			isDarkTheme: !this.state.isDarkTheme
+		});
+	}
+
 	render() {
 		return (
 			<nav
@@ -93,7 +105,7 @@ class Navbar extends React.Component {
 					<a className="navbar-brand js-scroll" href="#page-top">
 						
 						<img
-							src={this.state.logo}
+							src={this.state.isDarkTheme ? logo1 : this.state.logo}
 							alt="logo"
 							style={{ maxWidth: "120px" }}
 							
@@ -118,6 +130,7 @@ class Navbar extends React.Component {
 						id="navbarDefault"
 					>
 						<ul className="navbar-nav">
+							
 							<li className="nav-item">
 								<a className="nav-link js-scroll active" href="#home">
 									Home
@@ -142,6 +155,17 @@ class Navbar extends React.Component {
 								<a className="nav-link js-scroll" href="#contact">
 									Contact
 								</a>
+							</li>
+							<li className="nav-item">
+								<div className="nav-link theme-toggler">
+									{/* { this.state.isDarkTheme ? <FaSun /> : <FaMoon /> } */}
+									<DarkModeSwitch
+										checked={this.state.isDarkTheme}
+										onChange={this.onThemeChange.bind(this)}
+										size={25}
+										sunColor={null}
+									/>
+								</div>
 							</li>
 						</ul>
 					</div>

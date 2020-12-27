@@ -99,7 +99,7 @@ class Timeline extends Component {
 								<h5 className="vertical-timeline-element-subtitle mt-2 ">
 									{item.company}
 									{item.link && (
-										<a target="_blank" rel="noopener noreferrer" className="ml-2" href={item.link}>
+										<a target="_blank" rel="noopener noreferrer" className="ml-2 timeline-link-icon" href={item.link}>
 											<FaExternalLinkAlt />
 										</a>
 									)}
