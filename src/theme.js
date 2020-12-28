@@ -12,6 +12,9 @@ export const lightTheme = {
     navLink: '#0078ff',
     navHamburgerColor: '#1B1B1B',
     projectTechOpacity: '0.7',
+    formTextField: '#fff',
+    formTextColor: '#495057',
+    formTextBorder: '#ced4da',
 }
 
 export const darkTheme = {
@@ -28,4 +31,8 @@ export const darkTheme = {
     navLink: '#fff',
     navHamburgerColor: '#fff',
     projectTechOpacity: '1',
+    formTextField: '#404040',
+    formTextColor: '#fff',
+    formTextBorder: 'transparent',
+
 }

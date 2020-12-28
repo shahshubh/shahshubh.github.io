@@ -78,6 +78,7 @@ class Contact extends React.Component{
                                 <li><a href="https://github.com/shahshubh" target="_blank" rel="noopener noreferrer"><span className="ico-circle"><i className="ion-social-github"></i></span></a></li>
                                 <li><a href="https://www.linkedin.com/in/shubh-shah-2326081a3/" target="_blank" rel="noopener noreferrer"><span className="ico-circle"><i className="ion-social-linkedin"></i></span></a></li>
                                 <li><a href="https://www.instagram.com/shah_shubh_/" target="_blank" rel="noopener noreferrer"><span className="ico-circle"><i className="ion-social-instagram"></i></span></a></li>
+                                <li><a href="mailto:shahshubh1010@gmail.com" target="_blank" rel="noopener noreferrer"><span className="ico-circle"><i className="ion-social-google"></i></span></a></li>
                                 </ul>
                             </div>
                             </div>

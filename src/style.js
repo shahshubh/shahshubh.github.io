@@ -322,10 +322,13 @@ a.timeline-link-icon:hover{
 
 .form-group input:focus,.form-group textarea:focus{
     background-color: ${({ theme }) => theme.container};
+    color: ${({ theme }) => theme.formTextColor};
 }
 
 .form-control{
-    background-color: ${({ theme }) => theme.container};
+    background-color: ${({ theme }) => theme.formTextField};
+    border: 1px solid ${({ theme }) => theme.formTextBorder};
+    color: ${({ theme }) => theme.formTextColor};
 }
 
 /* Socials */
@@ -859,8 +862,10 @@ PORTFOLIO
 .work-img {
   display: block;
   overflow: hidden;
-  /* box-shadow: 0px 4px 39px -10px rgba(154,154,154,1); */
-  box-shadow: 0px 16px 41px -18px rgba(154,154,154,1);
+  // box-shadow: 0px 16px 41px -18px rgba(154,154,154,1);
+  box-shadow: 0px 16px 41px -18px ${({ theme }) => theme.shadowColor};
+  
+
 }
 
 .work-img img {
