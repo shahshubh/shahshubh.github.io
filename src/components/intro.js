@@ -1,9 +1,27 @@
 import React from 'react';
 // import './stars.scss';
 import Typed from 'react-typed';
+import $ from 'jquery';
+
+
 
 class Intro extends React.Component{
+  componentDidMount(){
+    $(".intro-title-letters").on("mouseover", function() {
+      $(this).addClass('rubberBandAnim');
+      this.addEventListener("webkitAnimationEnd", function(){
+        $(this).removeClass('rubberBandAnim');
+      });
+    });
+  }
+  
     render(){
+      
+      let introText = "Hello, I am Shubh Shah";
+      let introTextArr = [];
+      for(let i=0;i<introText.length;i++){
+        introTextArr.push(introText[i]);
+      }
         return (
           // <div id="home" className="intro route bg-image " style={{backgroundImage: "url("+bigImage+")"}}>
             <div id="home" className="intro route bg-image s-intro-background">
@@ -14,7 +32,17 @@ class Intro extends React.Component{
             <div className="intro-content display-table">
               <div className="table-cell">
                 <div className="container">
-                  <h1 className="intro-title mb-4">Hello, I am Shubh Shah</h1>
+                  <h1 className="intro-title mb-4">
+                    {
+                      introTextArr.map((e,i) => (
+                        e === " " ? (
+                          <span key={i} className="intro-title-letters" >{e}</span>
+                        ) : (
+                          <span key={i} style={{ display: 'inline-block' }} className="intro-title-letters" >{e}</span>
+                        )
+                      ))
+                    }
+                  </h1>
                   <p className="intro-subtitle">
                     <span className="text-slider-items">
                     </span>

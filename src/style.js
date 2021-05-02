@@ -1238,7 +1238,7 @@ ul.nav.nav-tabs{
 
 
 .vertical-timeline.vertical-timeline--two-columns:before{
-  box-shadow: 2.5px 0px 2px #ddd;
+  box-shadow: 2.5px 0px 2px ${({ theme }) => theme.formTextBorder};
 }
 
 .vertical-timeline-element-content{
@@ -1246,4 +1246,55 @@ ul.nav.nav-tabs{
 }
 
 
+
+
+
+.intro-title-letters:hover {
+  color: ${({ theme }) => theme.primaryBlueColor};
+}
+
+.rubberBandAnim{
+  cursor: pointer;
+  animation: rubberBand 1s;
+}
+
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+
+
+
+
 `
+
+
+
+

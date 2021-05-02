@@ -69,6 +69,18 @@ import chatify6 from '../img/chatify/8.jpg';
 import chatify7 from '../img/chatify/9.jpg';
 
 
+//campuscar jpg
+import campuscar from '../img/campuscar/1.jpg';
+import campuscar1 from '../img/campuscar/2.jpg';
+import campuscar2 from '../img/campuscar/3.jpg';
+import campuscar3 from '../img/campuscar/4.jpg';
+import campuscar4 from '../img/campuscar/5.jpg';
+import campuscar5 from '../img/campuscar/6.jpg';
+import campuscar6 from '../img/campuscar/7.jpg';
+import campuscar7 from '../img/campuscar/8.jpg';
+import campuscarGif1 from '../img/campuscar/gif1.gif';
+import campuscarGif2 from '../img/campuscar/gif2.gif';
+
 
 
 
@@ -141,6 +153,15 @@ import chatifyWebP5 from '../img/chatify/7.webp';
 import chatifyWebP6 from '../img/chatify/8.webp';
 import chatifyWebP7 from '../img/chatify/9.webp';
 
+//CampusCar
+import campuscarWebP from '../img/campuscar/1.webp';
+import campuscarWebP1 from '../img/campuscar/2.webp';
+import campuscarWebP2 from '../img/campuscar/3.webp';
+import campuscarWebP3 from '../img/campuscar/4.webp';
+import campuscarWebP4 from '../img/campuscar/5.webp';
+import campuscarWebP5 from '../img/campuscar/6.webp';
+import campuscarWebP6 from '../img/campuscar/7.webp';
+import campuscarWebP7 from '../img/campuscar/8.webp';
 
 
 
@@ -153,6 +174,32 @@ class Portfolio extends React.Component{
       super();
       this.state = {
         projects: [
+
+          {
+            title: "CampusCar",
+            // webLink: "",
+            githubLink: "https://github.com/shahshubh/CampusCar",
+            description:
+              "CampusCar provides automated vehicle entry system for any campus/institute or any buildings/socities to automate the process and help maintain records,logs,vehicles etc.",
+            stack: [
+              "FLUTTER",
+              "FIREBASE",
+              "OPENCV",
+              "PYTHON",
+              "FLASK",
+            ],
+
+            image: campuscar,
+            image1: campuscarGif1,
+            images: [campuscarGif2, campuscar1, campuscar2, campuscar3, campuscar4, campuscar5, campuscar6, campuscar7 ],
+
+            imageWebP: campuscarWebP,
+            imageWebP1: campuscarGif1,
+            imagesWebP: [campuscarGif2, campuscarWebP1, campuscarWebP2, campuscarWebP3, campuscarWebP4, campuscarWebP5, campuscarWebP6, campuscarWebP7 ],
+
+            dataLightbox: "gallery-campuscar",
+            type: "app"
+          },
 
 
           {
@@ -370,6 +417,11 @@ class Portfolio extends React.Component{
     }
     render(){
 
+      let label1 = `All (${this.state.projects.length})`;
+      let label2 = `Web Developement (${this.state.projects.filter(e => e.type === "web").length})`;
+      let label3 = `App Developement (${this.state.projects.filter(e => e.type === "app").length})`;
+      let label4 = `ML/DL (${this.state.projects.filter(e => e.type === "ml/dl").length})`;
+
         return (
           <section id="work" className="portfolio-mf sect-pt4 route">
             <div className="container">
@@ -393,16 +445,16 @@ class Portfolio extends React.Component{
               </div>
 
               <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
-                <Tab label="All (9)">
+                <Tab label={label1}>
                   <Projects projects={this.state.projects} type="All" />
                 </Tab>
-                <Tab label="Web Developement (3)">
+                <Tab label={label2}>
                   <Projects projects={this.state.projects} type="web" />
                 </Tab>
-                <Tab label="App Developement (3)">
+                <Tab label={label3}>
                   <Projects projects={this.state.projects} type="app" />
                 </Tab>
-                <Tab label="ML/DL (3)">
+                <Tab label={label4}>
                   <Projects projects={this.state.projects} type="ml/dl" />
                 </Tab>
             </Tabs>

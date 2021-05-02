@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 //import css in order
 import 'normalize.css';
-import './animate.css';
+import './css/animate.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './img/icons/css/ionicons.css';
 import './img/font-awesome/css/font-awesome.css';

@@ -15,7 +15,7 @@ class About extends React.Component{
                 {id:"MongoDB_skill", content: "MongoDB",porcentage: "75%", value: "75", icon: <DiMongodb /> },
                 {id:"ReactJS_skill", content: "ReactJS",porcentage: "75%", value: "75", icon: <FaReact /> },
                 {id:"ReactNative_skill", content: "React Native",porcentage: "70%", value: "70", icon: <FaReact /> },
-                {id:"Flutter_skill", content: "Flutter",porcentage: "60%", value: "60", icon: <SiFlutter /> },
+                {id:"Flutter_skill", content: "Flutter",porcentage: "70%", value: "70", icon: <SiFlutter /> },
                 {id:"JavaScript_skill", content: "JavaScript",porcentage: "70%", value: "70", icon: <SiJavascript /> },
                 {id:"Java_skill", content: "Java",porcentage: "70%", value: "70", icon: <FaJava /> },
                 {id:"Python_skill", content: "Python",porcentage: "40%", value: "40", icon: <FaPython /> },
