@@ -1290,6 +1290,22 @@ ul.nav.nav-tabs{
 
 
 
+/************** Scroll Bar ***************/
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: ${({ theme }) => theme.container};
+}
+::-webkit-scrollbar-thumb {
+  background: ${({ theme }) => theme.primaryBlueColor};
+}
+::-webkit-scrollbar-thumb:hover {
+  background: ${({ theme }) => theme.primaryBlueColor};
+}
+
+
 
 
 

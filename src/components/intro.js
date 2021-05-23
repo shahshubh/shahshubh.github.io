@@ -46,7 +46,7 @@ class Intro extends React.Component{
                   <p className="intro-subtitle">
                     <span className="text-slider-items">
                     </span>
-                    <strong className="text-slider"><Typed strings={['Front End Developer', 'Back End Developer', 'React Native Developer']} typeSpeed = {80} backDelay = {1100} backSpeed = {30} loop/></strong>
+                    <strong className="text-slider"><Typed strings={['Front End Developer', 'Back End Developer', 'Mobile App Developer']} typeSpeed = {80} backDelay = {1100} backSpeed = {30} loop/></strong>
                   </p>
                   <p className="pt-3">
                     <a 
