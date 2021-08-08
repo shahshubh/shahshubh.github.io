@@ -1,6 +1,6 @@
 import React from 'react';
 import myImage from "../img/shubh_profilepic2.jpg";
-import { SiTensorflow, SiFlutter, SiJavascript } from "react-icons/si";
+import { SiFlutter, SiJavascript } from "react-icons/si";
 import { FaHtml5, FaJava, FaNode, FaPython, FaReact } from 'react-icons/fa';
 import { DiMongodb } from 'react-icons/di';
 
@@ -9,17 +9,16 @@ class About extends React.Component{
         super();
         this.state = {
             skills:[
-                {id:"HTML_CSS_skill", content: "HTML / CSS",porcentage: "85%", value: "85", icon: <FaHtml5 /> },
-                
-                {id:"NodeJS_skill", content: "NodeJS / ExpressJS",porcentage: "75%", value: "75", icon: <FaNode />},
-                {id:"MongoDB_skill", content: "MongoDB",porcentage: "75%", value: "75", icon: <DiMongodb /> },
-                {id:"ReactJS_skill", content: "ReactJS",porcentage: "75%", value: "75", icon: <FaReact /> },
-                {id:"ReactNative_skill", content: "React Native",porcentage: "70%", value: "70", icon: <FaReact /> },
-                {id:"Flutter_skill", content: "Flutter",porcentage: "70%", value: "70", icon: <SiFlutter /> },
-                {id:"JavaScript_skill", content: "JavaScript",porcentage: "70%", value: "70", icon: <SiJavascript /> },
-                {id:"Java_skill", content: "Java",porcentage: "70%", value: "70", icon: <FaJava /> },
-                {id:"Python_skill", content: "Python",porcentage: "40%", value: "40", icon: <FaPython /> },
-                // {id:"MachineLearning_skill", content: "Machine Learning",porcentage: "40%", value: "40", icon: <SiTensorflow /> },
+                {id:"Java_skill", content: "Java",percentage: "80%", value: "80", icon: <FaJava /> },
+                {id:"Python_skill", content: "Python",percentage: "60%", value: "60", icon: <FaPython /> },
+                {id:"JavaScript_skill", content: "JavaScript",percentage: "70%", value: "70", icon: <SiJavascript /> },
+                {id:"HTML_CSS_skill", content: "HTML / CSS",percentage: "85%", value: "85", icon: <FaHtml5 /> },
+                {id:"NodeJS_skill", content: "NodeJS / ExpressJS",percentage: "75%", value: "75", icon: <FaNode />},
+                {id:"ReactJS_skill", content: "ReactJS",percentage: "75%", value: "75", icon: <FaReact /> },
+                {id:"ReactNative_skill", content: "React Native",percentage: "70%", value: "70", icon: <FaReact /> },
+                {id:"Flutter_skill", content: "Flutter",percentage: "70%", value: "70", icon: <SiFlutter /> },
+                {id:"MongoDB_skill", content: "MongoDB / MySQL",percentage: "75%", value: "75", icon: <DiMongodb /> },
+                // {id:"MachineLearning_skill", content: "Machine Learning",percentage: "40%", value: "40", icon: <SiTensorflow /> },
             ],
             about_me:[
                 {id: "first-p-about",content: "I am a final year student in Computer Science and Engineering(CSE) who loves to transform ideas into reality using code."},
@@ -81,9 +80,9 @@ class About extends React.Component{
                                                 this.state.skills.map(skill => {
                                                     return(
                                                         <React.Fragment key={skill.id}>
-                                                            <span> {skill.icon != null ? skill.icon : ""} {skill.content}</span> <span className="pull-right">{skill.porcentage}</span>
+                                                            <span> {skill.icon != null ? skill.icon : ""} {skill.content}</span> <span className="pull-right">{skill.percentage}</span>
                                                             <div className="progress">
-                                                                <div className="progress-bar" role="progressbar" style={{width: skill.porcentage}} aria-valuenow={skill.value} aria-valuemin="0" aria-valuemax="100"></div>
+                                                                <div className="progress-bar" role="progressbar" style={{width: skill.percentage}} aria-valuenow={skill.value} aria-valuemin="0" aria-valuemax="100"></div>
                                                             </div>
                                                         </React.Fragment>
                                                     );
