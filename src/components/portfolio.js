@@ -389,7 +389,7 @@ class Portfolio extends React.Component{
             title: "predImage - model trainer ",
             githubLink: "https://github.com/shahshubh/model-trainer",
             description:
-              "PredImage is a webapp to predict images. This project was made in 24hrs at DJCSI Hackathon CODESHASTRA 6.0. ",
+              "PredImage is a webapp to predict the category of image using ML model trained on 6 different categories. This project was made in 24hrs at DJCSI Hackathon CODESHASTRA 6.0. ",
             stack: [
               "BOOTSTRAP",
               "NODEJS",

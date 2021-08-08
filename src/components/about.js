@@ -19,10 +19,10 @@ class About extends React.Component{
                 {id:"JavaScript_skill", content: "JavaScript",porcentage: "70%", value: "70", icon: <SiJavascript /> },
                 {id:"Java_skill", content: "Java",porcentage: "70%", value: "70", icon: <FaJava /> },
                 {id:"Python_skill", content: "Python",porcentage: "40%", value: "40", icon: <FaPython /> },
-                {id:"MachineLearning_skill", content: "Machine Learning",porcentage: "40%", value: "40", icon: <SiTensorflow /> },
+                // {id:"MachineLearning_skill", content: "Machine Learning",porcentage: "40%", value: "40", icon: <SiTensorflow /> },
             ],
             about_me:[
-                {id: "first-p-about",content: "I am a third year student in Computer Science and Engineering(CSE) who loves to transform ideas into reality using code."},
+                {id: "first-p-about",content: "I am a final year student in Computer Science and Engineering(CSE) who loves to transform ideas into reality using code."},
                 {id: "second-p-about", content: "Motivated developer with experience creating websites and mobile applications. "}
             ]
         }

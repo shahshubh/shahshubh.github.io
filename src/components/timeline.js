@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FaReact, FaGraduationCap, FaExternalLinkAlt } from "react-icons/fa";
-import { MdWork } from "react-icons/md";
+// import { MdWork } from "react-icons/md";
 
 import {
 	VerticalTimeline,
@@ -13,22 +13,22 @@ class Timeline extends Component {
 		super();
 		this.state = {
 			work_list: [
-				{
-					role: "Software Engineering Virtual Internship",
-					company: "JPMorgan Chase & Co.",
-					time: "06/2020",
-					description: [
-						"Throughout the virtual experience, I got to know about the JPMorgan Chase frameworks",
-						"Generating patch files",
-						"Applying technical skills to a hypothetical request from the firm’s trading floor to analyze and visualize data in a new way.",
-					],
+				// {
+				// 	role: "Software Engineering Virtual Internship",
+				// 	company: "JPMorgan Chase & Co.",
+				// 	time: "06/2020",
+				// 	description: [
+				// 		"Throughout the virtual experience, I got to know about the JPMorgan Chase frameworks",
+				// 		"Generating patch files",
+				// 		"Applying technical skills to a hypothetical request from the firm’s trading floor to analyze and visualize data in a new way.",
+				// 	],
 
-					icon: <MdWork />,
-					iconBackgroundColor: "rgb(233, 30, 99)",
-					iconColor: "#fff",
-					link:
-						"https://insidesherpa.s3.amazonaws.com/completion-certificates/JP%20Morgan/R5iK7HMxJGBgaSbvk_JPMorgan%20Chase_2Ap99mtz77SRfiiC5_completion_certificate.pdf",
-				},
+				// 	icon: <MdWork />,
+				// 	iconBackgroundColor: "rgb(233, 30, 99)",
+				// 	iconColor: "#fff",
+				// 	link:
+				// 		"https://insidesherpa.s3.amazonaws.com/completion-certificates/JP%20Morgan/R5iK7HMxJGBgaSbvk_JPMorgan%20Chase_2Ap99mtz77SRfiiC5_completion_certificate.pdf",
+				// },
 				{
 					role: "Web Development Intern",
 					company: "QDS Pro",
