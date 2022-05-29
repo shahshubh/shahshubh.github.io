@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FaReact, FaGraduationCap, FaExternalLinkAlt } from "react-icons/fa";
+import { FaReact, FaGraduationCap, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 // import { MdWork } from "react-icons/md";
 
 import {
@@ -30,6 +30,21 @@ class Timeline extends Component {
 				// 		"https://insidesherpa.s3.amazonaws.com/completion-certificates/JP%20Morgan/R5iK7HMxJGBgaSbvk_JPMorgan%20Chase_2Ap99mtz77SRfiiC5_completion_certificate.pdf",
 				// },
 				{
+					role: "Github Extern'22",
+					company: "Numocity",
+					time: "01/2022 - 04/2022",
+					description: [
+						"I was responsible for developing a performance tool to alert on significant change in performance",
+						"Also worked on developing an admin portal."
+					],
+
+					icon: <FaGithub />,
+					iconBackgroundColor: "#000",
+					iconColor: "#fff",
+					borderTopColor: "#ff4a4a",
+					link: "https://www.numocity.com/"
+				},
+				{
 					role: "Web Development Intern",
 					company: "QDS Pro",
 					time: "05/2020 - 06/2020",
@@ -49,8 +64,8 @@ class Timeline extends Component {
 				{
 					role: "B.Tech",
 					company: "K.J. Somaiya College of Engineering (KJSCE)",
-					time: "08/2018 - Present",
-					description: ["Computer Engg.", "9.48 GPA in SEM IV"],
+					time: "08/2018 - 06/2022",
+					description: ["Computer Engg.", "9.18 CGPA (Aggregate)"],
 					icon: <FaGraduationCap />,
 					iconBackgroundColor: "rgb(16, 204, 82)",
 					iconColor: "#fff",
@@ -90,7 +105,7 @@ class Timeline extends Component {
 									color: item.iconColor,
 								}}
 								contentStyle={{
-									borderTop: `3px solid ${item.iconBackgroundColor}`,
+									borderTop: `3px solid ${item.borderTopColor ? item.borderTopColor : item.iconBackgroundColor}`,
 								}}
 							>
 								<h3 className="vertical-timeline-element-title">

@@ -81,6 +81,19 @@ import campuscar7 from '../img/campuscar/8.jpg';
 import campuscarGif1 from '../img/campuscar/gif1.gif';
 import campuscarGif2 from '../img/campuscar/gif2.gif';
 
+//yBully
+import yBully from '../img/ybully/1.png';
+import yBully1 from '../img/ybully/2.png';
+import yBully2 from '../img/ybully/3.png';
+import yBully3 from '../img/ybully/4.png';
+import yBully4 from '../img/ybully/5.png';
+import yBully5 from '../img/ybully/admin/1.png';
+import yBully6 from '../img/ybully/admin/2.png';
+import yBully7 from '../img/ybully/admin/3.png';
+import yBully8 from '../img/ybully/admin/4.png';
+import yBully9 from '../img/ybully/admin/5.png';
+import yBully10 from '../img/ybully/admin/6.png';
+import yBully11 from '../img/ybully/admin/7.png';
 
 
 
@@ -163,6 +176,19 @@ import campuscarWebP5 from '../img/campuscar/6.webp';
 import campuscarWebP6 from '../img/campuscar/7.webp';
 import campuscarWebP7 from '../img/campuscar/8.webp';
 
+//yBully
+import yBullyWebP from '../img/ybully/1.webp';
+import yBullyWebP1 from '../img/ybully/2.webp';
+import yBullyWebP2 from '../img/ybully/3.webp';
+import yBullyWebP3 from '../img/ybully/4.webp';
+import yBullyWebP4 from '../img/ybully/5.webp';
+import yBullyWebP5 from '../img/ybully/admin/1.webp';
+import yBullyWebP6 from '../img/ybully/admin/2.webp';
+import yBullyWebP7 from '../img/ybully/admin/3.webp';
+import yBullyWebP8 from '../img/ybully/admin/4.webp';
+import yBullyWebP9 from '../img/ybully/admin/5.webp';
+import yBullyWebP10 from '../img/ybully/admin/6.webp';
+import yBullyWebP11 from '../img/ybully/admin/7.webp';
 
 
 
@@ -174,6 +200,33 @@ class Portfolio extends React.Component{
       super();
       this.state = {
         projects: [
+
+          {
+            title: "yBully",
+            webLink: "https://chrome.google.com/webstore/detail/ybully/kkccgopbjoheebggcibgohiakeniobhb",
+            githubLink: "https://github.com/yBullyy",
+            description:
+              "yBully is a chrome extension for detecting cyberbullying tweets on twitter along with restricting users from posting any bully tweet and more...",
+            stack: [
+              "REACTJS",
+              "FIREBASE",
+              "FASTAPI",
+              "WEBSOCKETS",
+              "TENSORFLOW"
+            ],
+
+            image: yBully,
+            image1: yBully1,
+            images: [yBully2, yBully3, yBully4, yBully5, yBully6, yBully7, yBully8, yBully9, yBully10, yBully11],
+
+            imageWebP: yBullyWebP,
+            imageWebP1: yBullyWebP1,
+            imagesWebP: [yBullyWebP2, yBullyWebP3, yBullyWebP4, yBullyWebP5, yBullyWebP6, yBullyWebP7, yBullyWebP8, yBullyWebP9, yBullyWebP10, yBullyWebP11],
+
+            dataLightbox: "gallery-ybully",
+            type: "app"
+
+          },
 
           {
             title: "CampusCar",
@@ -198,7 +251,7 @@ class Portfolio extends React.Component{
             imagesWebP: [campuscarGif2, campuscarWebP1, campuscarWebP2, campuscarWebP3, campuscarWebP4, campuscarWebP5, campuscarWebP6, campuscarWebP7 ],
 
             dataLightbox: "gallery-campuscar",
-            type: "app"
+            type: "web"
           },
 
 
