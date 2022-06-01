@@ -224,7 +224,7 @@ class Portfolio extends React.Component{
             imagesWebP: [yBullyWebP2, yBullyWebP3, yBullyWebP4, yBullyWebP5, yBullyWebP6, yBullyWebP7, yBullyWebP8, yBullyWebP9, yBullyWebP10, yBullyWebP11],
 
             dataLightbox: "gallery-ybully",
-            type: "app"
+            type: "web"
 
           },
 
@@ -251,7 +251,7 @@ class Portfolio extends React.Component{
             imagesWebP: [campuscarGif2, campuscarWebP1, campuscarWebP2, campuscarWebP3, campuscarWebP4, campuscarWebP5, campuscarWebP6, campuscarWebP7 ],
 
             dataLightbox: "gallery-campuscar",
-            type: "web"
+            type: "app"
           },
 
 
