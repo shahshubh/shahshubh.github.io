@@ -21,8 +21,8 @@ class About extends React.Component{
                 // {id:"MachineLearning_skill", content: "Machine Learning",percentage: "40%", value: "40", icon: <SiTensorflow /> },
             ],
             about_me:[
-                {id: "first-p-about",content: "I am a final year student in Computer Science and Engineering(CSE) who loves to transform ideas into reality using code."},
-                {id: "second-p-about", content: "Motivated developer with experience creating websites and mobile applications. "}
+                {id: "first-p-about",content: "I'm a Software Engineer driven by a passion for crafting innovative solutions. I thrive on the challenge of translating complex problems into elegant code. Whether collaborating in a team or tackling projects solo, I enjoy the process of turning ideas into reality."},
+                {id: "second-p-about", content: "Take a look at my projects below!"}
             ]
         }
     }
