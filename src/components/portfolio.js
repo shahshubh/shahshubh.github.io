@@ -331,7 +331,7 @@ class Portfolio extends React.Component{
 
           {
             title: "SocialApp",
-            webLink: "https://sociallappp.herokuapp.com/",
+            // webLink: "https://sociallappp.herokuapp.com/",
             githubLink: "https://github.com/shahshubh/socialApp-MERN",
             description:
               "This is a social networking webapp similar to Instagram.",
@@ -398,7 +398,7 @@ class Portfolio extends React.Component{
           },
           {
             title: "MedEasy",
-            webLink: "https://medeasyy.herokuapp.com/",
+            // webLink: "https://medeasyy.herokuapp.com/",
             githubLink: "https://github.com/shahshubh/medEasy",
             description: "MedEasy is an E-commerce website for medicines.",
             stack: [
@@ -423,7 +423,7 @@ class Portfolio extends React.Component{
           },
           {
             title: "Chat-App",
-            webLink: "https://chat-appln.netlify.com/",
+            // webLink: "https://chat-appln.netlify.com/",
             githubLink: "https://github.com/shahshubh/chat-app",
             description:
               "This is a Realtime chat app where users can join any room to chat.",

@@ -52,7 +52,7 @@ class Intro extends React.Component{
                     <a 
                       className="btn btn-primary btn js-scroll px-4" 
                       style={{ cursor: "pointer" }}
-                      href= {`/files/Shubh_Resume.pdf?${new Date().getTime()}`}
+                      href= {`/files/Shubh_Resume_2.pdf?${new Date().getTime()}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

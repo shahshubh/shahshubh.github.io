@@ -29,6 +29,17 @@ class Timeline extends Component {
 				// 	link:
 				// 		"https://insidesherpa.s3.amazonaws.com/completion-certificates/JP%20Morgan/R5iK7HMxJGBgaSbvk_JPMorgan%20Chase_2Ap99mtz77SRfiiC5_completion_certificate.pdf",
 				// },
+				// {
+				// 	role: "SWE Intern",
+				// 	company: "Numocity",
+				// 	time: "07/2022 - 12/2022",
+				// 	description: [],
+				// 	icon: <FaBriefcase />,
+				// 	iconBackgroundColor: "#000",
+				// 	iconColor: "#fff",
+				// 	borderTopColor: "#ff4a4a",
+				// 	link: "https://www.numocity.com/"
+				// },
 				{
 					role: "Github Extern'22",
 					company: "Numocity",
@@ -65,7 +76,7 @@ class Timeline extends Component {
 					role: "B.Tech",
 					company: "K.J. Somaiya College of Engineering (KJSCE)",
 					time: "08/2018 - 06/2022",
-					description: ["Computer Engg.", "9.18 CGPA (Aggregate)"],
+					description: ["Computer Science (CSE)", "9.25 CGPA"],
 					icon: <FaGraduationCap />,
 					iconBackgroundColor: "rgb(16, 204, 82)",
 					iconColor: "#fff",

@@ -1,5 +1,5 @@
 import React from 'react';
-import myImage from "../img/shubh_profilepic2.jpg";
+import myImage from "../img/shubh.jpeg";
 import { SiFlutter, SiJavascript } from "react-icons/si";
 import { FaHtml5, FaJava, FaNode, FaPython, FaReact } from 'react-icons/fa';
 import { DiMongodb } from 'react-icons/di';
@@ -40,7 +40,7 @@ class About extends React.Component{
                                             <div className="col-sm-6 col-md-6" style={{margin: "0 auto"}}>
                                                 <div className="about-img" style={{textAlign: "center"}}>
                                                     <a href={myImage } data-lightbox="gallery-myimage">
-                                                        <img src={myImage} className="img-fluid rounded b-shadow-a" alt="profile-pic"/>
+                                                        <img src={myImage} className="img-fluid rounded b-shadow-a rounded-circle" alt="profile-pic"/>
                                                     </a>
                                                 </div>
                                             </div>

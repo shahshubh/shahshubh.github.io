@@ -93,7 +93,7 @@ class Contact extends React.Component{
                     <div className="row">
                     <div className="col-sm-12">
                         <div className="copyright-box">
-                        <p className="copyright">Copyright &copy; 2021 <strong>Shubh Shah</strong></p>
+                            <p className="copyright">Copyright &copy; {new Date().getFullYear()} <strong>Shubh Shah</strong></p>
                         </div>
                     </div>
                     </div>
