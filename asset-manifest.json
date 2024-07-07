@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d33265d1.css",
-    "main.js": "/static/js/main.fca90885.js",
+    "main.js": "/static/js/main.77d41bf5.js",
     "static/media/gif2.gif": "/static/media/gif2.592878506407645bf0cf.gif",
     "static/media/gif1.gif": "/static/media/gif1.f27e58f0c7da6cd39147.gif",
     "static/media/home.PNG": "/static/media/home.458beab28bf5cb86db1d.PNG",
@@ -20,7 +20,6 @@
     "static/media/2.jpg": "/static/media/2.625ba6764d8c3f60db09.jpg",
     "static/media/pending-orders.png": "/static/media/pending-orders.14ce2a485b8d5018d846.png",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/shubh_profilepic2.jpg": "/static/media/shubh_profilepic2.8d7f76006abe1c77db16.jpg",
     "static/media/ionicons.svg?v=2.0.0": "/static/media/ionicons.b45d332f6829d6813600.svg",
     "static/media/2.png": "/static/media/2.8936af3c8af34457043b.png",
     "static/media/profile.webp": "/static/media/profile.93382b3dfc236e6ab37d.webp",
@@ -71,6 +70,7 @@
     "static/media/movie3.PNG": "/static/media/movie3.9e85920a0ec89fb29387.PNG",
     "static/media/screen2.webp": "/static/media/screen2.0222a37e454d4175934c.webp",
     "static/media/8.webp": "/static/media/8.1f42ea61b6c746bf72cc.webp",
+    "static/media/shubh.jpeg": "/static/media/shubh.0bd29d0ea9968418197f.jpeg",
     "static/media/movie2.webp": "/static/media/movie2.cf65e4b485851c5e0209.webp",
     "static/media/orders.webp": "/static/media/orders.9de295f4f8c84b70891c.webp",
     "static/media/spam2.PNG": "/static/media/spam2.7ded61306ad8bf58ce9b.PNG",
@@ -93,10 +93,10 @@
     "static/media/1.PNG": "/static/media/1.ebef7d36a842b19a9281.PNG",
     "index.html": "/index.html",
     "main.d33265d1.css.map": "/static/css/main.d33265d1.css.map",
-    "main.fca90885.js.map": "/static/js/main.fca90885.js.map"
+    "main.77d41bf5.js.map": "/static/js/main.77d41bf5.js.map"
   },
   "entrypoints": [
     "static/css/main.d33265d1.css",
-    "static/js/main.fca90885.js"
+    "static/js/main.77d41bf5.js"
   ]
 }
