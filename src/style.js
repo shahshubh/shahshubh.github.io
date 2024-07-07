@@ -1210,6 +1210,8 @@ ul.nav.nav-tabs{
 .nav-tabs .nav-link{
   border-radius: 30px;
   cursor: pointer;
+  color: ${({ theme }) => theme.textDark};
+  border: 1px solid ${({ theme }) => theme.textDark};
 }
 
 .nav-tabs .nav-link.active{
