@@ -471,8 +471,8 @@ class Portfolio extends React.Component{
     render(){
 
       let label1 = `All (${this.state.projects.length})`;
-      let label2 = `Web Developement (${this.state.projects.filter(e => e.type === "web").length})`;
-      let label3 = `App Developement (${this.state.projects.filter(e => e.type === "app").length})`;
+      let label2 = `Web Development (${this.state.projects.filter(e => e.type === "web").length})`;
+      let label3 = `App Development (${this.state.projects.filter(e => e.type === "app").length})`;
       let label4 = `ML/DL (${this.state.projects.filter(e => e.type === "ml/dl").length})`;
 
         return (

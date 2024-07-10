@@ -10,14 +10,14 @@ class About extends React.Component{
         this.state = {
             skills:[
                 {id:"Java_skill", content: "Java",percentage: "80%", value: "80", icon: <FaJava /> },
+                {id:"JavaScript_skill", content: "JavaScript",percentage: "80%", value: "80", icon: <SiJavascript /> },
                 {id:"Python_skill", content: "Python",percentage: "60%", value: "60", icon: <FaPython /> },
-                {id:"JavaScript_skill", content: "JavaScript",percentage: "70%", value: "70", icon: <SiJavascript /> },
                 {id:"HTML_CSS_skill", content: "HTML / CSS",percentage: "85%", value: "85", icon: <FaHtml5 /> },
-                {id:"NodeJS_skill", content: "NodeJS / ExpressJS",percentage: "75%", value: "75", icon: <FaNode />},
+                {id:"NodeJS_skill", content: "NodeJS / ExpressJS",percentage: "85%", value: "75", icon: <FaNode />},
                 {id:"ReactJS_skill", content: "ReactJS",percentage: "75%", value: "75", icon: <FaReact /> },
                 {id:"ReactNative_skill", content: "React Native",percentage: "70%", value: "70", icon: <FaReact /> },
-                {id:"Flutter_skill", content: "Flutter",percentage: "70%", value: "70", icon: <SiFlutter /> },
-                {id:"MongoDB_skill", content: "MongoDB / MySQL",percentage: "75%", value: "75", icon: <DiMongodb /> },
+                {id:"Flutter_skill", content: "Flutter",percentage: "90%", value: "90", icon: <SiFlutter /> },
+                {id:"MongoDB_skill", content: "MongoDB / MySQL",percentage: "80%", value: "80", icon: <DiMongodb /> },
                 // {id:"MachineLearning_skill", content: "Machine Learning",percentage: "40%", value: "40", icon: <SiTensorflow /> },
             ],
             about_me:[
