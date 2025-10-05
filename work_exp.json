@@ -6,13 +6,13 @@
     "description": [
       "Spearheaded the new Insights (analytics platform) from initial research and scoping through architecture, design and implementation.",
       "Automated build and deployment workflows for Insights into a streamlined 2-step process - slashed deployment time to under 5 minutes.",
-      "Led end-to-end implementation of WhatsApp bot from scratch for EV charging, enabling end users to initiate charging without a native app.",
-      "Tech: NodeJS, Airbyte, Superset, PostgreSQL, MongoDB, Docker"
+      "Led end-to-end implementation of WhatsApp bot from scratch for EV charging, enabling end users to initiate charging without a native app."
     ],
     "icon": "work",
     "iconBackgroundColor": "#da7233",
     "iconColor": "#fff",
-    "borderTopColor": "#da7233"
+    "borderTopColor": "#da7233",
+    "skills": ["NodeJS", "PostgreSQL", "MongoDB", "Docker", "Airbyte", "Superset"]
   },
   {
     "role": "Software Engineer",
@@ -20,53 +20,53 @@
     "time": "Jan 2023 - Sep 2024",
     "description": [
       "Architected and maintained core backend services for the charging management system - enabling fully automated EV charging with 0 app interaction required reducing charging initiation time by 90%, while enhancing admin portal’s security and other capabilities ensuring 100% test coverage.",
-      "Led end-to-end design and implementation of payment gateway service, integrating multiple providers to accelerate go-to-market.",
-      "Tech: NodeJS, MySQL, MongoDB, Docker, Azure, Flutter"
+      "Led end-to-end design and implementation of payment gateway service, integrating multiple providers to accelerate go-to-market."
     ],
     "icon": "work",
     "iconBackgroundColor": "#da7233",
     "iconColor": "#fff",
-    "borderTopColor": "#da7233"
+    "borderTopColor": "#da7233",
+    "skills": ["NodeJS", "MySQL", "MongoDB", "Docker", "Azure", "Flutter"]
   },
   {
     "role": "SDE Intern",
     "company": "Numocity",
     "time": "Jul 2022 - Dec 2022",
     "description": [
-      "Developing features for Charging Management System (CMS) web and mobile application.",
-      "Tech: Flutter"
+      "Developing features for Charging Management System (CMS) web and mobile application."
     ],
     "icon": "work",
     "iconBackgroundColor": "#0078ff",
     "iconColor": "#fff",
-    "borderTopColor": "#0078ff"
+    "borderTopColor": "#0078ff",
+    "skills": ["Flutter"]
   },
   {
     "role": "Github Extern'22",
     "company": "Numocity",
     "time": "Jan 2022 - Apr 2022",
     "description": [
-      "Developed a performance tool which would run on over 20+ repositories of the company to alert onsignificant change in performance and assisted developing admin portal UI in Flutter.",
-      "Tech: NodeJS, Flutter"
+      "Developed a performance tool which would run on over 20+ repositories of the company to alert onsignificant change in performance and assisted developing admin portal UI in Flutter."
     ],
     "icon": "github",
     "iconBackgroundColor": "#0078ff",
     "iconColor": "#fff",
     "borderTopColor": "#0078ff",
-    "link": "https://www.numocity.com/"
+    "link": "https://www.numocity.com/",
+    "skills": ["NodeJS", "Flutter"]
   },
   {
     "role": "Web Development Intern",
     "company": "QDS Pro",
     "time": "May 2020 - Jun 2020",
     "description": [
-      "Enhanced and optimized their main websites with responsive design.",
-      "Tech: NextJS, ReactJS"
+      "Enhanced and optimized their main websites with responsive design."
     ],
     "icon": "react",
     "iconBackgroundColor": "#0078ff",
     "iconColor": "#fff",
-    "link": "/files/QDSPro_Intership_Certificate.pdf"
+    "link": "/files/QDSPro_Intership_Certificate.pdf",
+    "skills": ["NextJS", "ReactJS" ]
   },
   {
     "role": "B.Tech",
@@ -84,9 +84,7 @@
     "role": "HSC - 12th",
     "company": "K.J. Somaiya College of Science and Commerce",
     "time": "Jul 2016 - Jun 2018",
-    "description": [
-      "88.50 %"
-    ],
+    "description": ["88.50 %"],
     "icon": "education",
     "iconBackgroundColor": "rgb(16, 204, 82)",
     "iconColor": "#fff"

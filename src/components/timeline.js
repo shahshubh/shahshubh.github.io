@@ -19,45 +19,45 @@ class Timeline extends Component {
 					time: "Jul 2022 - Dec 2022",
 					description: [
 						"Developing features for Charging Management System (CMS) web and mobile application.",
-						"Tech: Flutter",
 					],
 					icon: <FaBriefcase />,
 					iconBackgroundColor: "#0078ff",
 					iconColor: "#fff",
 					borderTopColor: "#0078ff",
+					skills: ["Flutter"],
 				},
 				{
 					role: "Github Extern'22",
 					company: "Numocity",
-					time: "01/2022 - 04/2022",
+					time: "Jan 2022 - Apr 2022",
 					description: [
 						"Developed a performance tool which would run on over 20+ repositories of the company to alert onsignificant change in performance and assisted developing admin portal UI in Flutter.",
-						"Tech: NodeJS, Flutter"
 					],
 
 					icon: <FaGithub />,
 					iconBackgroundColor: "#0078ff",
 					iconColor: "#fff",
 					borderTopColor: "#0078ff",
-					link: "https://www.numocity.com/"
+					link: "https://www.numocity.com/",
+					skills: ["NodeJS", "Flutter" ]
 				},
 				{
 					role: "Web Development Intern",
 					company: "QDS Pro",
-					time: "05/2020 - 06/2020",
+					time: "May 2020 - Jun 2020",
 					description: [
 						"Enhanced and optimized their main websites with responsive design.",
-						"Tech: NextJS, ReactJS",
 					],
 					icon: <FaReact />,
 					iconBackgroundColor: "#0078ff",
 					iconColor: "#fff",
-					link: "/files/QDSPro_Intership_Certificate.pdf"
+					link: "/files/QDSPro_Intership_Certificate.pdf",
+					skills: ["NextJS", "ReactJS" ]
 				},
 				{
 					role: "B.Tech",
 					company: "K.J. Somaiya College of Engineering (KJSCE)",
-					time: "08/2018 - 06/2022",
+					time: "Sep 2018 - Jun 2022",
 					description: ["Computer Science (CSE)", "9.25 CGPA"],
 					icon: <FaGraduationCap />,
 					iconBackgroundColor: "rgb(16, 204, 82)",
@@ -66,7 +66,7 @@ class Timeline extends Component {
 				{
 					role: "HSC - 12th",
 					company: "K.J. Somaiya College of Science and Commerce",
-					time: "07/2016 - 06/2018",
+					time: "Jul 2016 - Jun 2018",
 					description: ["88.50 %"],
 					icon: <FaGraduationCap />,
 					iconBackgroundColor: "rgb(16, 204, 82)",
@@ -178,6 +178,28 @@ class Timeline extends Component {
 											<li key={i} >{d} </li>
 										))}
 									</ul>
+									{item.skills && item.skills.length > 0 && (
+										<div className="tech-stack-pills" style={{ marginTop: "1rem", display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+											{item.skills.map((tech, idx) => (
+												<span
+													key={idx}
+													className="tech-pill"
+													style={{
+														padding: "0.3em 0.8em",
+														borderRadius: "16px",
+														fontSize: "0.85em",
+														background: "var(--pill-bg, #e3e3e3)",
+														color: "var(--pill-color, #222)",
+														border: "1px solid var(--pill-border, #ccc)",
+														fontWeight: 500,
+														transition: "background 0.2s, color 0.2s"
+													}}
+												>
+													{tech}
+												</span>
+											))}
+										</div>
+									)}
 								</VerticalTimelineElement>
 							))}
 						</VerticalTimeline>
