@@ -1,28 +1,67 @@
 [
   {
+    "role": "Senior Software Engineer",
+    "company": "Numocity",
+    "time": "Sep 2024 - Present",
+    "description": [
+      "Spearheaded the new Insights (analytics platform) from initial research and scoping through architecture, design and implementation.",
+      "Automated build and deployment workflows for Insights into a streamlined 2-step process - slashed deployment time to under 5 minutes.",
+      "Led end-to-end implementation of WhatsApp bot from scratch for EV charging, enabling end users to initiate charging without a native app.",
+      "Tech: NodeJS, Airbyte, Superset, PostgreSQL, MongoDB, Docker"
+    ],
+    "icon": "work",
+    "iconBackgroundColor": "#ff4a4a",
+    "iconColor": "#fff",
+    "borderTopColor": "#ff4a4a"
+  },
+  {
+    "role": "Software Engineer",
+    "company": "Numocity",
+    "time": "Jan 2023 - Sep 2024",
+    "description": [
+      "Architected and maintained core backend services for the charging management system - enabling fully automated EV charging with 0 app interaction required reducing charging initiation time by 90%, while enhancing admin portal’s security and other capabilities ensuring 100% test coverage.",
+      "Led end-to-end design and implementation of payment gateway service, integrating multiple providers to accelerate go-to-market.",
+      "Tech: NodeJS, MySQL, MongoDB, Docker, Azure, Flutter"
+    ],
+    "icon": "work",
+    "iconBackgroundColor": "#ff4a4a",
+    "iconColor": "#fff",
+    "borderTopColor": "#ff4a4a"
+  },
+  {
+    "role": "SDE Intern",
+    "company": "Numocity",
+    "time": "Jul 2022 - Dec 2022",
+    "description": [
+      "Developing features for Charging Management System (CMS) web and mobile application.",
+      "Tech: Flutter"
+    ],
+    "icon": "work",
+    "iconBackgroundColor": "#0078ff",
+    "iconColor": "#fff",
+    "borderTopColor": "#0078ff"
+  },
+  {
     "role": "Github Extern'22",
     "company": "Numocity",
-    "time": "01/2022 - 04/2022",
+    "time": "Jan 2022 - Apr 2022",
     "description": [
-      "I was responsible for developing a performance tool to alert on significant change in performance",
-      "Also worked on developing an admin portal."
+      "Developed a performance tool which would run on over 20+ repositories of the company to alert onsignificant change in performance and assisted developing admin portal UI in Flutter.",
+      "Tech: NodeJS, Flutter"
     ],
     "icon": "github",
-    "iconBackgroundColor": "#000",
+    "iconBackgroundColor": "#0078ff",
     "iconColor": "#fff",
-    "borderTopColor": "#ff4a4a",
+    "borderTopColor": "#0078ff",
     "link": "https://www.numocity.com/"
   },
   {
     "role": "Web Development Intern",
     "company": "QDS Pro",
-    "time": "05/2020 - 06/2020",
+    "time": "May 2020 - Jun 2020",
     "description": [
-      "Maintaining & adding new features to QDS Pro main website",
-      "Developing an E-Learning platform",
-      "Optimizing user experience",
-      "Making responsive designs",
-      "NextJS, ReactJS"
+      "Enhanced and optimized their main websites with responsive design.",
+      "Tech: NextJS, ReactJS"
     ],
     "icon": "react",
     "iconBackgroundColor": "#0078ff",
@@ -32,7 +71,7 @@
   {
     "role": "B.Tech",
     "company": "K.J. Somaiya College of Engineering (KJSCE)",
-    "time": "08/2018 - 06/2022",
+    "time": "Sep 2018 - Jun 2022",
     "description": [
       "Computer Science (CSE)",
       "9.25 CGPA"
@@ -44,7 +83,7 @@
   {
     "role": "HSC - 12th",
     "company": "K.J. Somaiya College of Science and Commerce",
-    "time": "07/2016 - 06/2018",
+    "time": "Jul 2016 - Jun 2018",
     "description": [
       "88.50 %"
     ],
