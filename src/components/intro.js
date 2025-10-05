@@ -3,7 +3,7 @@ import React from 'react';
 import Typed from 'react-typed';
 import $ from 'jquery';
 
-
+const resume_link = 'https://drive.google.com/file/d/1rnUZm1hltG1qN6TN97GwQ14EQVQAHJZD/view?usp=sharing';
 
 class Intro extends React.Component{
   componentDidMount(){
@@ -52,7 +52,7 @@ class Intro extends React.Component{
                     <a 
                       className="btn btn-primary btn js-scroll px-4" 
                       style={{ cursor: "pointer" }}
-                      href= {`/files/Shubh_Resume_2.pdf?${new Date().getTime()}`}
+                      href= {`${resume_link}?${new Date().getTime()}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
