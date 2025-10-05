@@ -10,9 +10,9 @@
       "Tech: NodeJS, Airbyte, Superset, PostgreSQL, MongoDB, Docker"
     ],
     "icon": "work",
-    "iconBackgroundColor": "#ff4a4a",
+    "iconBackgroundColor": "#da7233",
     "iconColor": "#fff",
-    "borderTopColor": "#ff4a4a"
+    "borderTopColor": "#da7233"
   },
   {
     "role": "Software Engineer",
@@ -24,9 +24,9 @@
       "Tech: NodeJS, MySQL, MongoDB, Docker, Azure, Flutter"
     ],
     "icon": "work",
-    "iconBackgroundColor": "#ff4a4a",
+    "iconBackgroundColor": "#da7233",
     "iconColor": "#fff",
-    "borderTopColor": "#ff4a4a"
+    "borderTopColor": "#da7233"
   },
   {
     "role": "SDE Intern",
