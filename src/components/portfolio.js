@@ -1,6 +1,6 @@
-import React from 'react';
-
-import {Tabs, Tab} from 'react-bootstrap-tabs';
+import React, { useState } from 'react';
+import { Tabs, Tab } from 'react-bootstrap-tabs';
+import { motion, AnimatePresence } from "framer-motion";
 
 //import socialApp
 import socialApp from '../img/socialapp/home.PNG';
@@ -192,330 +192,356 @@ import yBullyWebP11 from '../img/ybully/admin/7.webp';
 
 
 
-import Projects from './projects';
+import ProjectTile from './projectTile';
+
+const projectsList = [
+
+  {
+    title: "yBully",
+    webLink: "https://chrome.google.com/webstore/detail/ybully/kkccgopbjoheebggcibgohiakeniobhb",
+    githubLink: "https://github.com/yBullyy",
+    description:
+      "yBully is a chrome extension for detecting cyberbullying tweets on twitter along with restricting users from posting any bully tweet and more...",
+    stack: [
+      "REACTJS",
+      "FIREBASE",
+      "FASTAPI",
+      "WEBSOCKETS",
+      "TENSORFLOW"
+    ],
+
+    image: yBully,
+    image1: yBully1,
+    images: [yBully2, yBully3, yBully4, yBully5, yBully6, yBully7, yBully8, yBully9, yBully10, yBully11],
+
+    imageWebP: yBullyWebP,
+    imageWebP1: yBullyWebP1,
+    imagesWebP: [yBullyWebP2, yBullyWebP3, yBullyWebP4, yBullyWebP5, yBullyWebP6, yBullyWebP7, yBullyWebP8, yBullyWebP9, yBullyWebP10, yBullyWebP11],
+
+    dataLightbox: "gallery-ybully",
+    type: "web"
+
+  },
+
+  {
+    title: "CampusCar",
+    // webLink: "",
+    githubLink: "https://github.com/shahshubh/CampusCar",
+    description:
+      "CampusCar provides automated vehicle entry system for any campus/institute or any buildings/socities to automate the process and help maintain records,logs,vehicles etc.",
+    stack: [
+      "FLUTTER",
+      "FIREBASE",
+      "OPENCV",
+      "PYTHON",
+      "FLASK",
+    ],
+
+    image: campuscar,
+    image1: campuscarGif1,
+    images: [campuscarGif2, campuscar1, campuscar2, campuscar3, campuscar4, campuscar5, campuscar6, campuscar7],
+
+    imageWebP: campuscarWebP,
+    imageWebP1: campuscarGif1,
+    imagesWebP: [campuscarGif2, campuscarWebP1, campuscarWebP2, campuscarWebP3, campuscarWebP4, campuscarWebP5, campuscarWebP6, campuscarWebP7],
+
+    dataLightbox: "gallery-campuscar",
+    type: "app"
+  },
 
 
-class Portfolio extends React.Component{
-    constructor(){
-      super();
-      this.state = {
-        projects: [
+  {
+    title: "Chatify",
+    webLink: "https://drive.google.com/drive/folders/110ropjkiKC5FIHfkLiHjSIPOlsfM1UMU?usp=sharing",
+    githubLink: "https://github.com/shahshubh/Chatify",
+    description:
+      "Chat Application in flutter.",
+    stack: [
+      "FLUTTER",
+      "FIREBASE",
+      "AGORA-RTC",
+    ],
 
-          {
-            title: "yBully",
-            webLink: "https://chrome.google.com/webstore/detail/ybully/kkccgopbjoheebggcibgohiakeniobhb",
-            githubLink: "https://github.com/yBullyy",
-            description:
-              "yBully is a chrome extension for detecting cyberbullying tweets on twitter along with restricting users from posting any bully tweet and more...",
-            stack: [
-              "REACTJS",
-              "FIREBASE",
-              "FASTAPI",
-              "WEBSOCKETS",
-              "TENSORFLOW"
-            ],
+    image: chatify,
+    image1: chatify1,
+    images: [chatify2, chatify3, chatify4, chatify5, chatify6, chatify7],
 
-            image: yBully,
-            image1: yBully1,
-            images: [yBully2, yBully3, yBully4, yBully5, yBully6, yBully7, yBully8, yBully9, yBully10, yBully11],
+    imageWebP: chatifyWebP,
+    imageWebP1: chatifyWebP1,
+    imagesWebP: [chatifyWebP2, chatifyWebP3, chatifyWebP4, chatifyWebP5, chatifyWebP6, chatifyWebP7],
 
-            imageWebP: yBullyWebP,
-            imageWebP1: yBullyWebP1,
-            imagesWebP: [yBullyWebP2, yBullyWebP3, yBullyWebP4, yBullyWebP5, yBullyWebP6, yBullyWebP7, yBullyWebP8, yBullyWebP9, yBullyWebP10, yBullyWebP11],
+    dataLightbox: "gallery-chatify",
+    type: "app"
+  },
 
-            dataLightbox: "gallery-ybully",
-            type: "web"
+  {
+    title: "SocialApp-RN",
+    webLink: "https://socialapp-serverr.herokuapp.com/static/socialapp-rn-2.apk",
+    githubLink: "https://github.com/shahshubh/SocialApp-React-Native",
+    description:
+      "Social Networking mobile app similar to Instagram in React Native.",
+    stack: [
+      "REACT-NATIVE",
+      "REDUX",
+      "SOCKET.IO",
+      "MONGODB",
+      "NODEJS",
+      "EXPRESS"
+    ],
 
-          },
+    image: socialapp,
+    image1: socialapp1,
+    images: [socialapp2, socialapp3, socialapp4, socialapp7, socialapp8, socialapp10],
 
-          {
-            title: "CampusCar",
-            // webLink: "",
-            githubLink: "https://github.com/shahshubh/CampusCar",
-            description:
-              "CampusCar provides automated vehicle entry system for any campus/institute or any buildings/socities to automate the process and help maintain records,logs,vehicles etc.",
-            stack: [
-              "FLUTTER",
-              "FIREBASE",
-              "OPENCV",
-              "PYTHON",
-              "FLASK",
-            ],
+    imageWebP: socialappWebP,
+    imageWebP1: socialappWebP1,
+    imagesWebP: [socialappWebP2, socialappWebP3, socialappWebP4, socialappWebP7, socialappWebP8, socialappWebP10],
 
-            image: campuscar,
-            image1: campuscarGif1,
-            images: [campuscarGif2, campuscar1, campuscar2, campuscar3, campuscar4, campuscar5, campuscar6, campuscar7 ],
+    dataLightbox: "gallery-socialapp-rn",
+    type: "app"
+  },
 
-            imageWebP: campuscarWebP,
-            imageWebP1: campuscarGif1,
-            imagesWebP: [campuscarGif2, campuscarWebP1, campuscarWebP2, campuscarWebP3, campuscarWebP4, campuscarWebP5, campuscarWebP6, campuscarWebP7 ],
+  {
+    title: "ShopApp",
 
-            dataLightbox: "gallery-campuscar",
-            type: "app"
-          },
+    githubLink: "https://github.com/shahshubh/Shop-App",
+    description:
+      "An E-commerce shop app in React Native.",
+    stack: [
+      "REACTJS",
+      "REACT-NATIVE",
+      "REDUX",
+      "FIREBASE",
+    ],
+    image: shopapp,
+    image1: shopapp1,
+    images: [shopapp2, shopapp3, shopapp4, shopapp5, shopapp6],
 
+    imageWebP: shopappWebP,
+    imageWebP1: shopappWebP1,
+    imagesWebP: [shopappWebP2, shopappWebP3, shopappWebP4, shopappWebP5, shopappWebP6],
+    dataLightbox: "gallery-shopapp",
+    type: "app"
+  },
 
-          {
-            title: "Chatify",
-            webLink: "https://drive.google.com/drive/folders/110ropjkiKC5FIHfkLiHjSIPOlsfM1UMU?usp=sharing",
-            githubLink: "https://github.com/shahshubh/Chatify",
-            description:
-              "Chat Application in flutter.",
-            stack: [
-              "FLUTTER",
-              "FIREBASE",
-              "AGORA-RTC",
-            ],
+  {
+    title: "SocialApp",
+    // webLink: "https://sociallappp.herokuapp.com/",
+    githubLink: "https://github.com/shahshubh/socialApp-MERN",
+    description:
+      "This is a social networking webapp similar to Instagram.",
+    stack: [
+      "REACTJS",
+      "NODEJS",
+      "EXPRESSJS",
+      "MONGODB",
+      "BOOTSTRAP-MATERIAL",
+    ],
+    image: socialApp,
+    image1: socialApp1,
+    images: [socialApp2, socialApp3, socialApp4, socialApp5],
 
-            image: chatify,
-            image1: chatify1,
-            images: [chatify2, chatify3, chatify4, chatify5, chatify6, chatify7 ],
+    imageWebP: socialAppWebP,
+    imageWebP1: socialAppWebP1,
+    imagesWebP: [socialAppWebP2, socialAppWebP3, socialAppWebP4, socialAppWebP5],
 
-            imageWebP: chatifyWebP,
-            imageWebP1: chatifyWebP1,
-            imagesWebP: [chatifyWebP2, chatifyWebP3, chatifyWebP4, chatifyWebP5, chatifyWebP6, chatifyWebP7 ],
+    dataLightbox: "gallery-socialapp",
+    type: "web"
+  },
+  {
+    title: "Spam Message Classification",
+    githubLink: "https://github.com/shahshubh/spam-message-classification",
+    description: "A Spam Detection Filter for Text Messages using NLP and Naive Bayes.",
+    stack: [
+      "NUMPY",
+      "PANDAS",
+      "SEABORN",
+      "SCIKIT-LEARN",
+      "NLP",
+      "NAIVE-BAYES",
+    ],
+    image: spam,
+    image1: spam1,
+    images: [spam2],
 
-            dataLightbox: "gallery-chatify",
-            type: "app"
-          },
+    imageWebP: spamWebP,
+    imageWebP1: spamWebP1,
+    imagesWebP: [spamWebP2],
 
-          {
-            title: "SocialApp-RN",
-            webLink: "https://socialapp-serverr.herokuapp.com/static/socialapp-rn-2.apk",
-            githubLink: "https://github.com/shahshubh/SocialApp-React-Native",
-            description:
-              "Social Networking mobile app similar to Instagram in React Native.",
-            stack: [
-              "REACT-NATIVE",
-              "REDUX",
-              "SOCKET.IO",
-              "MONGODB",
-              "NODEJS",
-              "EXPRESS"
-            ],
+    dataLightbox: "gallery-spam-msg",
+    type: "ml/dl"
+  },
+  {
+    title: "Movie Recommender System",
+    githubLink: "https://github.com/shahshubh/Machine-Learning-Projects/tree/master/Movie_recommender_system",
+    description: "A basic movie recommender system. It tells you what movies are most similar to your movie choice.",
+    stack: [
+      "NUMPY",
+      "PANDAS",
+      "SEABORN",
+    ],
+    image: movie,
+    image1: movie1,
+    images: [movie2],
 
-            image: socialapp,
-            image1: socialapp1,
-            images: [socialapp2, socialapp3, socialapp4, socialapp7, socialapp8, socialapp10 ],
+    imageWebP: movieWebP,
+    imageWebP1: movieWebP1,
+    imagesWebP: [movieWebP2],
 
-            imageWebP: socialappWebP,
-            imageWebP1: socialappWebP1,
-            imagesWebP: [socialappWebP2, socialappWebP3, socialappWebP4, socialappWebP7, socialappWebP8, socialappWebP10 ],
+    dataLightbox: "gallery-movie-recommender",
+    type: "ml/dl"
+  },
+  {
+    title: "MedEasy",
+    // webLink: "https://medeasyy.herokuapp.com/",
+    githubLink: "https://github.com/shahshubh/medEasy",
+    description: "MedEasy is an E-commerce website for medicines.",
+    stack: [
+      "HTML",
+      "CSS",
+      "BOOTSTRAP",
+      "JAVASCRIPT",
+      "NODEJS",
+      "EXPRESSJS",
+      "MONGODB",
+    ],
+    image: medeasy,
+    image1: medeasy1,
+    images: [medeasy2, medeasy3, medeasy4, medeasy5, medeasy6],
 
-            dataLightbox: "gallery-socialapp-rn",
-            type: "app"
-          },
+    imageWebP: medeasyWebP,
+    imageWebP1: medeasyWebP1,
+    imagesWebP: [medeasyWebP2, medeasyWebP3, medeasyWebP4, medeasyWebP5, medeasyWebP6],
 
-          {
-            title: "ShopApp",
-            
-            githubLink: "https://github.com/shahshubh/Shop-App",
-            description:
-              "An E-commerce shop app in React Native.",
-            stack: [
-              "REACTJS",
-              "REACT-NATIVE",
-              "REDUX",
-              "FIREBASE",
-            ],
-            image: shopapp,
-            image1: shopapp1,
-            images: [shopapp2,shopapp3,shopapp4,shopapp5,shopapp6],
+    dataLightbox: "gallery-medeasy",
+    type: "web"
+  },
+  {
+    title: "Chat-App",
+    // webLink: "https://chat-appln.netlify.com/",
+    githubLink: "https://github.com/shahshubh/chat-app",
+    description:
+      "This is a Realtime chat app where users can join any room to chat.",
+    stack: ["REACTJS", "NODEJS", "EXPRESSJS", "SOCKET.IO"],
+    image: chatapp1,
+    image1: chatapp,
+    images: [],
 
-            imageWebP: shopappWebP,
-            imageWebP1: shopappWebP1,
-            imagesWebP: [shopappWebP2,shopappWebP3,shopappWebP4,shopappWebP5,shopappWebP6],
-            dataLightbox: "gallery-shopapp",
-            type: "app"
-          },
+    imageWebP: chatappWebP1,
+    imageWebP1: chatappWebP,
+    imagesWebP: [],
+    dataLightbox: "gallery-chatapp",
+    type: "web"
+  },
+  {
+    title: "predImage - model trainer ",
+    githubLink: "https://github.com/shahshubh/model-trainer",
+    description:
+      "PredImage is a webapp to predict the category of image using ML model trained on 6 different categories. This project was made in 24hrs at DJCSI Hackathon CODESHASTRA 6.0. ",
+    stack: [
+      "BOOTSTRAP",
+      "NODEJS",
+      "JAVASCRIPT",
+      "FLASK",
+      "TENSORFLOW",
+      "OPENCV",
+      "KERAS-CNN",
+    ],
+    image: predimage,
+    image1: predimage1,
+    images: [predimage2, predimage3],
 
-          {
-            title: "SocialApp",
-            // webLink: "https://sociallappp.herokuapp.com/",
-            githubLink: "https://github.com/shahshubh/socialApp-MERN",
-            description:
-              "This is a social networking webapp similar to Instagram.",
-            stack: [
-              "REACTJS",
-              "NODEJS",
-              "EXPRESSJS",
-              "MONGODB",
-              "BOOTSTRAP-MATERIAL",
-            ],
-            image: socialApp,
-            image1: socialApp1,
-            images: [socialApp2, socialApp3, socialApp4, socialApp5],
+    imageWebP: predimageWebP,
+    imageWebP1: predimageWebP1,
+    imagesWebP: [predimageWebP2, predimageWebP3],
 
-            imageWebP: socialAppWebP,
-            imageWebP1: socialAppWebP1,
-            imagesWebP: [socialAppWebP2, socialAppWebP3, socialAppWebP4, socialAppWebP5],
+    dataLightbox: "gallery-predimage",
+    type: "ml/dl"
+  },
 
-            dataLightbox: "gallery-socialapp",
-            type: "web"
-          },
-          {
-            title: "Spam Message Classification",
-            githubLink: "https://github.com/shahshubh/spam-message-classification",
-            description: "A Spam Detection Filter for Text Messages using NLP and Naive Bayes.",
-            stack: [
-              "NUMPY",
-              "PANDAS",
-              "SEABORN",
-              "SCIKIT-LEARN",
-              "NLP",
-              "NAIVE-BAYES",
-            ],
-            image: spam,
-            image1: spam1,
-            images: [spam2],
-            
-            imageWebP: spamWebP,
-            imageWebP1: spamWebP1,
-            imagesWebP: [spamWebP2],
+];
 
-            dataLightbox: "gallery-spam-msg",
-            type: "ml/dl"
-          },
-          {
-            title: "Movie Recommender System",
-            githubLink: "https://github.com/shahshubh/Machine-Learning-Projects/tree/master/Movie_recommender_system",
-            description: "A basic movie recommender system. It tells you what movies are most similar to your movie choice.",
-            stack: [
-              "NUMPY",
-              "PANDAS",
-              "SEABORN",
-            ],
-            image: movie,
-            image1: movie1,
-            images: [movie2],
-            
-            imageWebP: movieWebP,
-            imageWebP1: movieWebP1,
-            imagesWebP: [movieWebP2],
+const Portfolio = () => {
+  const [projects] = useState(projectsList);
+  const [filtered, setFiltered] = useState(projectsList);
+  const [activeTab, setActiveTab] = useState(0);
 
-            dataLightbox: "gallery-movie-recommender",
-            type: "ml/dl"
-          },
-          {
-            title: "MedEasy",
-            // webLink: "https://medeasyy.herokuapp.com/",
-            githubLink: "https://github.com/shahshubh/medEasy",
-            description: "MedEasy is an E-commerce website for medicines.",
-            stack: [
-              "HTML",
-              "CSS",
-              "BOOTSTRAP",
-              "JAVASCRIPT",
-              "NODEJS",
-              "EXPRESSJS",
-              "MONGODB",
-            ],
-            image: medeasy,
-            image1: medeasy1,
-            images: [medeasy2, medeasy3, medeasy4, medeasy5, medeasy6],
-            
-            imageWebP: medeasyWebP,
-            imageWebP1: medeasyWebP1,
-            imagesWebP: [medeasyWebP2, medeasyWebP3, medeasyWebP4, medeasyWebP5, medeasyWebP6],
+  let label1 = `All (${projects.length})`;
+  let label2 = `Web Development (${projects.filter(e => e.type === "web").length})`;
+  let label3 = `App Development (${projects.filter(e => e.type === "app").length})`;
+  let label4 = `ML/DL (${projects.filter(e => e.type === "ml/dl").length})`;
 
-            dataLightbox: "gallery-medeasy",
-            type: "web"
-          },
-          {
-            title: "Chat-App",
-            // webLink: "https://chat-appln.netlify.com/",
-            githubLink: "https://github.com/shahshubh/chat-app",
-            description:
-              "This is a Realtime chat app where users can join any room to chat.",
-            stack: ["REACTJS", "NODEJS", "EXPRESSJS", "SOCKET.IO"],
-            image: chatapp1,
-            image1: chatapp,
-            images: [],
-            
-            imageWebP: chatappWebP1,
-            imageWebP1: chatappWebP,
-            imagesWebP: [],
-            dataLightbox: "gallery-chatapp",
-            type: "web"
-          },
-          {
-            title: "predImage - model trainer ",
-            githubLink: "https://github.com/shahshubh/model-trainer",
-            description:
-              "PredImage is a webapp to predict the category of image using ML model trained on 6 different categories. This project was made in 24hrs at DJCSI Hackathon CODESHASTRA 6.0. ",
-            stack: [
-              "BOOTSTRAP",
-              "NODEJS",
-              "JAVASCRIPT",
-              "FLASK",
-              "TENSORFLOW",
-              "OPENCV",
-              "KERAS-CNN",
-            ],
-            image: predimage,
-            image1: predimage1,
-            images: [predimage2, predimage3],
-            
-            imageWebP: predimageWebP,
-            imageWebP1: predimageWebP1,
-            imagesWebP: [predimageWebP2, predimageWebP3],
+  const indexToTypeMap = {
+    0: 'All',
+    1: 'web',
+    2: 'app',
+    3: 'ml/dl'
+  };
 
-            dataLightbox: "gallery-predimage",
-            type: "ml/dl"
-          },
-
-        ],
-
-      }
-    }
-    render(){
-
-      let label1 = `All (${this.state.projects.length})`;
-      let label2 = `Web Development (${this.state.projects.filter(e => e.type === "web").length})`;
-      let label3 = `App Development (${this.state.projects.filter(e => e.type === "app").length})`;
-      let label4 = `ML/DL (${this.state.projects.filter(e => e.type === "ml/dl").length})`;
-
-        return (
-          <section id="work" className="portfolio-mf sect-pt4 route">
-            <div className="container">
-              <div className="row">
-                <div className="col-sm-12">
-                  <div className="title-box text-center">
-                    <h3 className="title-a s-port ">
-                      Portfolio
-                    </h3>
-                    <p className="subtitle-a">
-                      Check Out Few Of My Selected Projects.
-                    </p>
-                    <div className="line-mf"></div>
-                  </div>
-                  {/* <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center'  }} >
-                    <div>All</div>
-                    <div>Website</div>
-                    <div>Native Apps</div>
-                  </div> */}
-                </div>
-              </div>
-
-              <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
-                <Tab label={label1}>
-                  <Projects projects={this.state.projects} type="All" />
-                </Tab>
-                <Tab label={label2}>
-                  <Projects projects={this.state.projects} type="web" />
-                </Tab>
-                <Tab label={label3}>
-                  <Projects projects={this.state.projects} type="app" />
-                </Tab>
-                <Tab label={label4}>
-                  <Projects projects={this.state.projects} type="ml/dl" />
-                </Tab>
-            </Tabs>
-
+  return (
+    <section id="work" className="portfolio-mf sect-pt4 route">
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-12">
+            <div className="title-box text-center">
+              <h3 className="title-a s-port ">
+                Portfolio
+              </h3>
+              <p className="subtitle-a">
+                Check Out Few Of My Selected Projects.
+              </p>
+              <div className="line-mf"></div>
             </div>
-          </section>
-        );
-    }
+          </div>
+        </div>
+
+        <Tabs onSelect={(index, label) => {
+          if (index === 0) {
+            setFiltered(projects);
+          } else {
+            setFiltered(projects.filter(e => e.type === indexToTypeMap[index]));
+          }
+          setActiveTab(index);
+        }} selected={activeTab} >
+          <Tab label={label1} />
+          <Tab label={label2} />
+          <Tab label={label3} />
+          <Tab label={label4} />
+        </Tabs>
+        
+        <div className="row">
+          <AnimatePresence>
+            {filtered.map((project, index) => (
+              <motion.div
+                key={project.title}
+                className="col-lg-4 col-md-6 col-sm-12"
+                layout
+                initial={{ opacity: 0, scale: 0.6 }}
+                animate={{ 
+                  opacity: 1, 
+                  scale: 1,
+                }}
+                exit={{ 
+                  opacity: 0,
+                  scale: 0.6,
+                  transition: { duration: 0.2 }
+                }}
+                transition={{ 
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 30,
+                  duration: 0.5,
+                  delay: index * 0.05
+                }}
+              >
+                <ProjectTile project={project} index={index} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Portfolio;

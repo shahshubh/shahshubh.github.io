@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "framer-motion": "^6.5.1",
     "gh-pages": "^6.1.1",
     "jquery": "^3.4.1",
     "lightbox2": "^2.11.0",
