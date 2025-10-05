@@ -1,1 +1,55 @@
-[]
+[
+  {
+    "role": "Github Extern'22",
+    "company": "Numocity",
+    "time": "01/2022 - 04/2022",
+    "description": [
+      "I was responsible for developing a performance tool to alert on significant change in performance",
+      "Also worked on developing an admin portal."
+    ],
+    "icon": "github",
+    "iconBackgroundColor": "#000",
+    "iconColor": "#fff",
+    "borderTopColor": "#ff4a4a",
+    "link": "https://www.numocity.com/"
+  },
+  {
+    "role": "Web Development Intern",
+    "company": "QDS Pro",
+    "time": "05/2020 - 06/2020",
+    "description": [
+      "Maintaining & adding new features to QDS Pro main website",
+      "Developing an E-Learning platform",
+      "Optimizing user experience",
+      "Making responsive designs",
+      "NextJS, ReactJS"
+    ],
+    "icon": "react",
+    "iconBackgroundColor": "#0078ff",
+    "iconColor": "#fff",
+    "link": "/files/QDSPro_Intership_Certificate.pdf"
+  },
+  {
+    "role": "B.Tech",
+    "company": "K.J. Somaiya College of Engineering (KJSCE)",
+    "time": "08/2018 - 06/2022",
+    "description": [
+      "Computer Science (CSE)",
+      "9.25 CGPA"
+    ],
+    "icon": "education",
+    "iconBackgroundColor": "rgb(16, 204, 82)",
+    "iconColor": "#fff"
+  },
+  {
+    "role": "HSC - 12th",
+    "company": "K.J. Somaiya College of Science and Commerce",
+    "time": "07/2016 - 06/2018",
+    "description": [
+      "88.50 %"
+    ],
+    "icon": "education",
+    "iconBackgroundColor": "rgb(16, 204, 82)",
+    "iconColor": "#fff"
+  }
+]
