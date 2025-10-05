@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FaReact, FaGraduationCap, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaReact, FaGraduationCap, FaExternalLinkAlt, FaGithub, FaBriefcase } from "react-icons/fa";
 // import { MdWork } from "react-icons/md";
 
 import {
@@ -13,46 +13,32 @@ class Timeline extends Component {
 		super();
 		this.state = {
 			work_list: [
-				// {
-				// 	role: "Software Engineering Virtual Internship",
-				// 	company: "JPMorgan Chase & Co.",
-				// 	time: "06/2020",
-				// 	description: [
-				// 		"Throughout the virtual experience, I got to know about the JPMorgan Chase frameworks",
-				// 		"Generating patch files",
-				// 		"Applying technical skills to a hypothetical request from the firm’s trading floor to analyze and visualize data in a new way.",
-				// 	],
-
-				// 	icon: <MdWork />,
-				// 	iconBackgroundColor: "rgb(233, 30, 99)",
-				// 	iconColor: "#fff",
-				// 	link:
-				// 		"https://insidesherpa.s3.amazonaws.com/completion-certificates/JP%20Morgan/R5iK7HMxJGBgaSbvk_JPMorgan%20Chase_2Ap99mtz77SRfiiC5_completion_certificate.pdf",
-				// },
-				// {
-				// 	role: "SWE Intern",
-				// 	company: "Numocity",
-				// 	time: "07/2022 - 12/2022",
-				// 	description: [],
-				// 	icon: <FaBriefcase />,
-				// 	iconBackgroundColor: "#000",
-				// 	iconColor: "#fff",
-				// 	borderTopColor: "#ff4a4a",
-				// 	link: "https://www.numocity.com/"
-				// },
+				{
+					role: "SDE Intern",
+					company: "Numocity",
+					time: "Jul 2022 - Dec 2022",
+					description: [
+						"Developing features for Charging Management System (CMS) web and mobile application.",
+						"Tech: Flutter",
+					],
+					icon: <FaBriefcase />,
+					iconBackgroundColor: "#0078ff",
+					iconColor: "#fff",
+					borderTopColor: "#0078ff",
+				},
 				{
 					role: "Github Extern'22",
 					company: "Numocity",
 					time: "01/2022 - 04/2022",
 					description: [
-						"I was responsible for developing a performance tool to alert on significant change in performance",
-						"Also worked on developing an admin portal."
+						"Developed a performance tool which would run on over 20+ repositories of the company to alert onsignificant change in performance and assisted developing admin portal UI in Flutter.",
+						"Tech: NodeJS, Flutter"
 					],
 
 					icon: <FaGithub />,
-					iconBackgroundColor: "#000",
+					iconBackgroundColor: "#0078ff",
 					iconColor: "#fff",
-					borderTopColor: "#ff4a4a",
+					borderTopColor: "#0078ff",
 					link: "https://www.numocity.com/"
 				},
 				{
@@ -60,13 +46,9 @@ class Timeline extends Component {
 					company: "QDS Pro",
 					time: "05/2020 - 06/2020",
 					description: [
-						"Maintaining & adding new features to QDS Pro main website",
-						"Developing an E-Learning platform",
-						"Optimizing user experience",
-						"Making responsive designs",
-						"NextJS, ReactJS",
+						"Enhanced and optimized their main websites with responsive design.",
+						"Tech: NextJS, ReactJS",
 					],
-
 					icon: <FaReact />,
 					iconBackgroundColor: "#0078ff",
 					iconColor: "#fff",
@@ -91,7 +73,66 @@ class Timeline extends Component {
 					iconColor: "#fff",
 				},
 			],
+			isLoading: false,
 		};
+	}
+
+	componentDidMount() {
+		this.fetchWorkList();
+	}
+
+	fetchWorkList = async () => {
+		this.setState({ isLoading: true });
+		try {
+			const directLink = `https://raw.githubusercontent.com/shahshubh/shahshubh.github.io/refs/heads/source/work_exp.json`;
+			const response = await fetch(directLink);
+			if (!response.ok) {
+				throw new Error(`Failed to fetch data: ${response.status}`);
+			}
+			const fetchedData = await response.json();
+			// Process the icons from string representations to actual components
+			const iconTypeToComponentMap = {
+				'github': <FaGithub />,
+				'react': <FaReact />,
+				'education': <FaGraduationCap />,
+				'work': <FaBriefcase />,
+			};
+			const processedData = fetchedData.map(item => {
+				const icon = iconTypeToComponentMap[item.icon] || <FaBriefcase />;
+				return { ...item, icon };
+			});
+			if (processedData.length > 0) {
+				this.setState({ work_list: processedData, isLoading: false });
+			}
+		} catch (error) {
+			console.error("Error fetching work list:", error);
+		} finally {
+			this.setState({ isLoading: false });
+		}
+	};
+
+	loader = () => {
+		return (
+			<div className="text-center" style={{ padding: "2rem" }}>
+				<div className="loader" style={{
+					border: "4px solid #f3f3f3",
+					borderTop: "4px solid #0078ff",
+					borderRadius: "50%",
+					width: "32px",
+					height: "32px",
+					animation: "spin 1s linear infinite",
+					margin: "0 auto"
+				}} />
+				<style>
+					{`
+						@keyframes spin {
+						0% { transform: rotate(0deg); }
+						100% { transform: rotate(360deg); }
+						}
+					`}
+				</style>
+			</div>
+		);
 	}
 
 	render() {
@@ -100,44 +141,47 @@ class Timeline extends Component {
 				<div className="container">
 					<div className="title-box text-center">
 						<h3 className="title-a-timeline">Work Experience & Education</h3>
-
 						<div className="line-mf-timeline"></div>
 					</div>
 
-					<VerticalTimeline>
-						{this.state.work_list.map((item, i) => (
-							<VerticalTimelineElement
-								key={i}
-								className="vertical-timeline-element--work"
-								date={item.time}
-								icon={item.icon}
-								iconStyle={{
-									background: item.iconBackgroundColor,
-									color: item.iconColor,
-								}}
-								contentStyle={{
-									borderTop: `3px solid ${item.borderTopColor ? item.borderTopColor : item.iconBackgroundColor}`,
-								}}
-							>
-								<h3 className="vertical-timeline-element-title">
-									{item.role}{" "}
-								</h3>
-								<h5 className="vertical-timeline-element-subtitle mt-2 ">
-									{item.company}
-									{item.link && (
-										<a target="_blank" rel="noopener noreferrer" className="ml-2 timeline-link-icon" href={item.link}>
-											<FaExternalLinkAlt />
-										</a>
-									)}
-								</h5>
-								<ul>
-									{item.description.map((d, i) => (
-										<li key={i} >{d} </li>
-									))}
-								</ul>
-							</VerticalTimelineElement>
-						))}
-					</VerticalTimeline>
+					{this.state.isLoading ? (
+						this.loader()
+					) : (
+						<VerticalTimeline>
+							{this.state.work_list.map((item, i) => (
+								<VerticalTimelineElement
+									key={i}
+									className="vertical-timeline-element--work"
+									date={item.time}
+									icon={item.icon}
+									iconStyle={{
+										background: item.iconBackgroundColor,
+										color: item.iconColor,
+									}}
+									contentStyle={{
+										borderTop: `3px solid ${item.borderTopColor ? item.borderTopColor : item.iconBackgroundColor}`,
+									}}
+								>
+									<h3 className="vertical-timeline-element-title">
+										{item.role}{" "}
+									</h3>
+									<h5 className="vertical-timeline-element-subtitle mt-2 ">
+										{item.company}
+										{item.link && (
+											<a target="_blank" rel="noopener noreferrer" className="ml-2 timeline-link-icon" href={item.link}>
+												<FaExternalLinkAlt />
+											</a>
+										)}
+									</h5>
+									<ul>
+										{item.description.map((d, i) => (
+											<li key={i} >{d} </li>
+										))}
+									</ul>
+								</VerticalTimelineElement>
+							))}
+						</VerticalTimeline>
+					)}
 				</div>
 			</section>
 		);
