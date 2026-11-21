@@ -84,7 +84,7 @@ class Timeline extends Component {
 	fetchWorkList = async () => {
 		this.setState({ isLoading: true });
 		try {
-			const directLink = `https://raw.githubusercontent.com/shahshubh/shahshubh.github.io/refs/heads/source/work_exp.json`;
+			const directLink = `${process.env.PUBLIC_URL}/work_experience.json?${Date.now()}`;
 			const response = await fetch(directLink);
 			if (!response.ok) {
 				throw new Error(`Failed to fetch data: ${response.status}`);

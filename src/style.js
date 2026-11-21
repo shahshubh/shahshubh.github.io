@@ -771,6 +771,17 @@ INTRO
   font-size: 3rem;
 }
 
+@media (max-width: 576px) {
+  .intro .intro-title {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    line-height: 1.18;
+  }
+
+  .intro .intro-subtitle {
+    font-size: 1.15rem;
+  }
+}
+
 .intro .intro-subtitle {
   font-size: 1.5rem;
   font-weight: 300;
