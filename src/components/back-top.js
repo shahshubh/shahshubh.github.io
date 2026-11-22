@@ -1,27 +1,48 @@
 import React from 'react';
-import $ from 'jquery';
-import '../libs/easing.js'
 
 class BackToTop extends React.Component {
-    componentDidMount(){
-        $('.back-to-top').click(function(){
-            $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
-            return false;
-          });
-        window.addEventListener('scroll', ()=>{
-            if(window.pageYOffset > 100){
-                document.querySelector('.back-to-top').classList.remove("fadeOut");
-                document.querySelector('.back-to-top').style.display = "block";
-                document.querySelector('.back-to-top').classList.add("fadeIn");
-            }else {
-                document.querySelector('.back-to-top').classList.remove("fadeIn");
-                document.querySelector('.back-to-top').classList.add("fadeOut");
+    componentDidMount() {
+        this.frame = null;
+        this.updateVisibility = () => {
+            this.frame = null;
+            if (this.element) {
+                this.element.classList.toggle("is-visible", window.pageYOffset > 100);
             }
-        });
+        };
+        this.onScroll = () => {
+            if (!this.frame) {
+                this.frame = window.requestAnimationFrame(this.updateVisibility);
+            }
+        };
+        window.addEventListener("scroll", this.onScroll, { passive: true });
+        this.updateVisibility();
     }
 
-    render(){
-        return <a href="/" className="back-to-top animated"><i className="fa fa-chevron-up"></i></a>;
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.onScroll);
+        if (this.frame) window.cancelAnimationFrame(this.frame);
+    }
+
+    scrollToTop = (event) => {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+        });
+    };
+
+    render() {
+        return (
+            <a
+                ref={(element) => { this.element = element; }}
+                href="#page-top"
+                className="back-to-top"
+                aria-label="Back to top"
+                onClick={this.scrollToTop}
+            >
+                <i className="fa fa-chevron-up"></i>
+            </a>
+        );
     }
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 //import css in order
 import 'normalize.css';
@@ -38,6 +38,36 @@ import { ThemeProvider } from 'styled-components';
 
 const App = () => {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+    useEffect(() => {
+        const targets = document.querySelectorAll(
+            "#about .box-shadow-full, #work .title-box, #work .s-project, #timeline .vertical-timeline, #contact .box-shadow-full"
+        );
+
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            targets.forEach((target) => target.classList.add("is-visible"));
+            return undefined;
+        }
+
+        targets.forEach((target) => target.classList.add("reveal-on-scroll"));
+        if (!("IntersectionObserver" in window)) {
+            targets.forEach((target) => target.classList.add("is-visible"));
+            return undefined;
+        }
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.12 }
+        );
+        targets.forEach((target) => observer.observe(target));
+
+        return () => observer.disconnect();
+    }, []);
     const toggleTheme = () => {
         if (theme === 'light') {
             setTheme('dark');
