@@ -458,7 +458,10 @@ a.timeline-link-icon:hover{
 
 .back-to-top {
   position: fixed;
-  display: none;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
   background: #0078ff;
   color: #fff;
   width: 44px;
@@ -469,8 +472,14 @@ a.timeline-link-icon:hover{
   border-radius: 50%;
   right: 15px;
   bottom: 15px;
-  transition: background 0.5s;
+  transition: background 0.25s ease, opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
   z-index: 11;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .back-to-top i {
@@ -771,6 +780,17 @@ INTRO
   font-size: 3rem;
 }
 
+@media (max-width: 576px) {
+  .intro .intro-title {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    line-height: 1.18;
+  }
+
+  .intro .intro-subtitle {
+    font-size: 1.15rem;
+  }
+}
+
 .intro .intro-subtitle {
   font-size: 1.5rem;
   font-weight: 300;
@@ -852,11 +872,17 @@ PORTFOLIO
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: ${({ theme }) => theme.container};
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.work-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px ${({ theme }) => theme.shadowColor};
 }
 
 .work-box:hover img {
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
+  -webkit-transform: scale(1.06);
+  transform: scale(1.06);
 }
 
 .work-img {
@@ -869,7 +895,7 @@ PORTFOLIO
 }
 
 .work-img img {
-  transition: all 1s;
+  transition: transform 0.55s cubic-bezier(.22, 1, .36, 1);
 }
 
 .work-content {
@@ -1255,6 +1281,27 @@ ul.nav.nav-tabs{
   color: ${({ theme }) => theme.primaryBlueColor};
 }
 
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.22, 1, .36, 1);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-on-scroll.is-visible .progress-bar {
+  transform-origin: left;
+  animation: skill-reveal 0.85s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes skill-reveal {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
 .rubberBandAnim{
   cursor: pointer;
   animation: rubberBand 1s;
@@ -1305,6 +1352,20 @@ ul.nav.nav-tabs{
 }
 ::-webkit-scrollbar-thumb:hover {
   background: ${({ theme }) => theme.primaryBlueColor};
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 

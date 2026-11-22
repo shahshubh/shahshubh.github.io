@@ -22,7 +22,6 @@
     <meta property="og:description" content="I'm a Software Engineer driven by a passion for crafting innovative solutions. I thrive on the challenge of translating complex problems into elegant code. Whether collaborating in a team or tackling projects solo, I enjoy the process of turning ideas into reality.">
     <meta property="og:image" content="%PUBLIC_URL%/images/cover-image.png">
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <!-- <meta id="meta-og-image" property="og:image" content="%PUBLIC_URL%/images/cover-image.png"> -->
     <!-- <script>
       let obj = document.getElementById("meta-og-image");
@@ -54,6 +53,10 @@
     
   </head>
   <style>
+    html, body {
+      background: #0b0d10;
+    }
+
     #root {
       visibility: hidden;
     }
@@ -64,27 +67,82 @@
       left: 0;
       width: 100%;
       height: 100%;
-      opacity: 0;
-      /* transition: all 5s; */
+      z-index: 2000;
+      pointer-events: none;
+      display: grid;
+      place-items: center;
+      background: #0b0d10;
+      transition: clip-path 1.05s cubic-bezier(.76, 0, .24, 1) 450ms,
+                  visibility 0s linear 1.5s;
+      clip-path: circle(150% at 50% 50%);
     }
+
+    #reveal-effect:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(115deg, transparent 0 58%, rgba(0, 120, 255, .12) 58% 58.4%, transparent 58.4%),
+        radial-gradient(circle at 50% 48%, rgba(0, 120, 255, .11), transparent 28%);
+      opacity: .9;
+    }
+
+    #reveal-effect .reveal-mark {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: clamp(2rem, 7vw, 5.5rem);
+      font-weight: 800;
+      letter-spacing: -.06em;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: reveal-mark 1.25s cubic-bezier(.22, 1, .36, 1) 150ms forwards;
+    }
+
+    #reveal-effect .reveal-mark span {
+      color: #0078ff;
+    }
+
+    @keyframes reveal-mark {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     body.loaded #root {
       visibility: visible;
     }
 
-    body.loaded #reveal-effect {
-      opacity: 1;
-      z-index: 2000;
+    body.revealed #reveal-effect {
+      visibility: hidden;
+      clip-path: circle(0 at 50% 50%);
     }
 
-    body.revealed #reveal-effect {
-      display: none;
+    body.revealed #reveal-effect .reveal-mark {
+      opacity: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #reveal-effect {
+        transition-duration: 0.01ms;
+        transition-delay: 0ms;
+      }
+
+      #reveal-effect .reveal-mark {
+        animation: none;
+        opacity: 1;
+        transform: none;
+      }
     }
   </style>
   <body id="page-top">
 
     <div id="root"></div>
-    <canvas id="reveal-effect"></canvas>
-    <script src="three.min.js"></script>
+    <div id="reveal-effect" aria-hidden="true">
+      <div class="reveal-mark">SS<span>.</span></div>
+    </div>
     <script src="reveal-effect.js" ></script>
   </body>
 </html>

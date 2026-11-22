@@ -84,12 +84,23 @@ class Timeline extends Component {
 	fetchWorkList = async () => {
 		this.setState({ isLoading: true });
 		try {
-			const directLink = `https://raw.githubusercontent.com/shahshubh/shahshubh.github.io/refs/heads/source/work_exp.json`;
-			const response = await fetch(directLink);
-			if (!response.ok) {
-				throw new Error(`Failed to fetch data: ${response.status}`);
+			let fetchedData;
+			try {
+				const liveUrl = `https://raw.githubusercontent.com/shahshubh/shahshubh.github.io/refs/heads/source/work_exp.json?t=${Date.now()}`;
+				const liveResponse = await fetch(liveUrl);
+				if (!liveResponse.ok) {
+					throw new Error(`Failed to fetch live data: ${liveResponse.status}`);
+				}
+				fetchedData = await liveResponse.json();
+			} catch (liveError) {
+				console.warn("Could not fetch live work experience; using bundled fallback.", liveError);
+				const fallbackUrl = `${process.env.PUBLIC_URL}/work_experience.json?${Date.now()}`;
+				const fallbackResponse = await fetch(fallbackUrl);
+				if (!fallbackResponse.ok) {
+					throw new Error(`Failed to fetch fallback data: ${fallbackResponse.status}`);
+				}
+				fetchedData = await fallbackResponse.json();
 			}
-			const fetchedData = await response.json();
 			// Process the icons from string representations to actual components
 			const iconTypeToComponentMap = {
 				'github': <FaGithub />,
